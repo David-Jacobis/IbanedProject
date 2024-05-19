@@ -1,0 +1,45 @@
+:root{
+    --bg-dark: #000000;
+    --header-height: 50px;
+    --footer-height: 100px;  
+    --shadow:
+        0 2px 23px 0 rgba(0, 0, 0, 0.1),
+        0 2px 49px 0 rgba(0, 0, 0, 0.06);
+}
+
+* {
+    box-sizing: border-box;
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+                                                
+}
+/* Layout em GRID */
+.App {
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    grid-template-rows: 
+        var(--header-height)
+        1fr
+        var(--footer-height);
+    grid-template-areas: 
+        "header"
+        "content"
+        "footer";
+    min-height: 100vh;
+    background-color: var(--bg-dark);
+    text-align: center;
+}
+
+header.header{
+    grid-area: header;
+}
+main.content{
+    grid-area: content;
+}
+
+footer.footer{
+    grid-area: footer;
+}
