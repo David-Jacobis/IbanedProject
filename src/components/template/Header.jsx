@@ -14,7 +14,7 @@ export default props =>
                     <ul>
                         <li><Link to='/Sobre'>SOBRE</Link></li>
                         <li><a href="#">MINISTÉRIOS</a></li>
-                        <li><a href="#">PROGRAMAÇÃO</a></li>
+                        {/* <li><a href="#">PROGRAMAÇÃO</a></li> */}
                         <li><a href="#">CÉLULAS</a></li>
                         <li><a href="#">ASSISTIR ONLINE</a></li>
                     </ul>
