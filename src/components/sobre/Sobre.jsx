@@ -2,7 +2,13 @@ import React from "react";
 import './Sobre.css';
 import Container from '@mui/material/Container';
 import 'bootstrap/dist/css/bootstrap.min.css'
-import CarouselFadeExample from "../carousel/CarouselFade";
+import Aboutme from "../aboutme/Aboutme";
+import PrLeal from '../../assets/images/PrLeal.png';
+import PrEber from '../../assets/images/PrEber.png';
+import PrLuciano from '../../assets/images/PrLuciano.png';
+import PrMarcos from '../../assets/images/PrMarcos.png';
+import PrFabio from '../../assets/images/PrFabio.png';
+import { Grid } from "@mui/material";
 
 function Sobre(){
     return <React.Fragment>
@@ -20,10 +26,39 @@ function Sobre(){
                     </div>
                 </section>
                 <section>
-                    <Container maxWidth="mt">
-                        <div className="Carousel">
-                            <CarouselFadeExample/>
-                        </div>
+                    <Container>
+                        <Grid container spacing={2} justifyContent="center" alignItems="center">
+                            <Grid item xs={12} sm={6} md={2}>
+                                <Aboutme
+                                    img={PrLeal}
+                                    title="Pastor Leal"
+                                    text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo eveniet rem dignissimos recusandae dolor harum atque cumque corporis quia porro, dolorum natus, sit tenetur placeat aperiam temporibus quo et perferendis." />
+                            </Grid>
+                            <Grid item xs={12} sm={6} md={2}>
+                                <Aboutme
+                                    img={PrEber}
+                                    title="Pastor Eber"
+                                    text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo eveniet rem dignissimos recusandae dolor harum atque cumque corporis quia porro, dolorum natus, sit tenetur placeat aperiam temporibus quo et perferendis." />
+                            </Grid>
+                            <Grid item xs={12} sm={6} md={2}>
+                                <Aboutme
+                                    img={PrLuciano}
+                                    title="Pastor Luciano"
+                                    text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo eveniet rem dignissimos recusandae dolor harum atque cumque corporis quia porro, dolorum natus, sit tenetur placeat aperiam temporibus quo et perferendis." />
+                            </Grid>
+                            <Grid item xs={12} sm={6} md={2}>
+                                <Aboutme
+                                    img={PrMarcos}
+                                    title="Pastor Marcos"
+                                    text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo eveniet rem dignissimos recusandae dolor harum atque cumque corporis quia porro, dolorum natus, sit tenetur placeat aperiam temporibus quo et perferendis." />
+                            </Grid>
+                            <Grid item xs={12} sm={6} md={2}>
+                                <Aboutme
+                                    img={PrFabio}
+                                    title="Pastor Fabio"
+                                    text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo eveniet rem dignissimos recusandae dolor harum atque cumque corporis quia porro, dolorum natus, sit tenetur placeat aperiam temporibus quo et perferendis." />
+                            </Grid>
+                        </Grid>
                     </Container>
                 </section>
                 <section>
@@ -62,13 +97,13 @@ function Sobre(){
                 <section>
                     <div className="Location">
                         <h2>Veja Nossa Localização</h2>
-                        <div class="map-container">
+                        <div className="map-container">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3749.980197180699!2d-43.977176923982114!3d-19.967335039473866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa697d054c41631%3A0xb6b7c7a7086340bb!2sIBANED%20-%20Igreja%20Batista%20Estrela%20D&#39;Alva!5e0!3m2!1spt-BR!2sbr!4v1716136704432!5m2!1spt-BR!2sbr"
                         width="600"
                         height="450" 
-                        allowfullscreen="" 
+                        allowFullScreen="" 
                         loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade">
+                        referrerPolicy="no-referrer-when-downgrade">
                         </iframe>
                         </div>
                     </div>

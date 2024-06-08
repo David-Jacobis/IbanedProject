@@ -13,10 +13,10 @@ export default props =>
                 <nav>
                     <ul>
                         <li><Link to='/Sobre'>SOBRE</Link></li>
-                        <li><a href="#">MINISTÉRIOS</a></li>
+                        <li><Link to='/Ministerios'>MINISTÉRIOS</Link></li>
                         {/* <li><a href="#">PROGRAMAÇÃO</a></li> */}
-                        <li><a href="#">CÉLULAS</a></li>
-                        <li><a href="#">ASSISTIR ONLINE</a></li>
+                        <li><Link to='/Celulas'>CÉLULAS</Link></li>
+                        <li><Link to='/AssistirOnline'>ASSISTIR ONLINE</Link></li>
                     </ul>
                 </nav>
             </div> 
