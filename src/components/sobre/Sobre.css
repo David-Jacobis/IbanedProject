@@ -1,37 +1,40 @@
-.sobreMain{
-    padding-top: 20px;
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    background-color: black;
-}
-.contentSobre{
-    display: flex;
-    flex-direction: column;
-    margin-top: 70px;
-    background-color: black;
-    padding-top: 10px;
-    align-items: start;
-    justify-content: center;
-    padding-left: 16px;
-    padding-right: 16px;
-    text-align: justify;
-    color: aliceblue;
-}
-.contentSobreH{
+.sobreMain {
+  padding-top: 20px;
+  margin-top: 20px;
   display: flex;
-    flex-direction: column;
-    background-color: black;
-    align-items: start;
-    justify-content: center;
-    text-align: justify;
-    padding-left: 16px;
-    padding-right: 16px;
-    color: aliceblue;
+  flex-direction: column;
+  background-color: black;
 }
-.contentSobre h4{
-    font-family: 'Meldina', sans-serif;
-    font-size: 30px;
+.contentSobre {
+  display: flex;
+  flex-direction: column;
+  margin-top: 70px;
+  background-color: black;
+  padding-top: 10px;
+  align-items: start;
+  justify-content: center;
+  padding-left: 16px;
+  padding-right: 16px;
+  text-align: justify;
+  color: aliceblue;
+}
+.contentSobreH {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  align-items: start;
+  justify-content: center;
+  text-align: justify;
+  padding-left: 16px;
+  padding-right: 16px;
+  color: aliceblue;
+}
+.contentSobre h4 {
+  font-family: "Meldina", sans-serif;
+  font-size: 30px;
+}
+.contentSobre p {
+  margin-bottom: 40px;
 }
 .map-container {
   position: relative;
@@ -47,6 +50,6 @@
   height: 100%;
   border: 0;
 }
-.Location h2{
+.Location h2 {
   color: white;
 }

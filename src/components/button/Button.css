@@ -1,24 +1,21 @@
 .botao-sm {
-    background-color: transparent;
-    color: #ffffff; /* cor do texto branca */
-    border: 2px solid #ffffff; /* borda branca */
-    border-radius: 20px; /* bordas arredondadas */
-    padding: 8px 16px; /* espaço interno */
-    font-size: 14px; /* tamanho da fonte */
-    cursor: pointer; /* cursor ao passar por cima */
-    outline: none; /* remove o contorno ao focar */
-    display: flex;
-    
+  background-color: transparent;
+  color: #ffffff; /* cor do texto branca */
+  border: 2px solid #ffffff; /* borda branca */
+  border-radius: 20px; /* bordas arredondadas */
+  padding: 8px 16px; /* espaço interno */
+  font-size: 14px; /* tamanho da fonte */
+  cursor: pointer; /* cursor ao passar por cima */
+  outline: none; /* remove o contorno ao focar */
+  display: flex;
 }
 
 .icon {
-    /* Ajusta o tamanho do ícone */
-    font-size: large; /* Ajuste conforme necessário */
-    margin-right: 5px; /* Adiciona um pequeno espaçamento entre o ícone e o texto */
-  }
-
-.botao-sm:hover {
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  /* Ajusta o tamanho do ícone */
+  font-size: large; /* Ajuste conforme necessário */
+  margin-right: 5px; /* Adiciona um pequeno espaçamento entre o ícone e o texto */
 }
 
-
+.botao-sm:hover {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}

@@ -1,16 +1,16 @@
-footer.footer{
-    margin-top: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 25px 0;    
+footer.footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 0;
 }
-.container{
-    max-width: 1070px;
-    margin: auto;
-    text-align: center;
+.container {
+  max-width: 1070px;
+  margin: auto;
+  text-align: center;
 }
 
-.tittle{
-    padding: 0 50px;
+.tittle {
+  padding: 0 50px;
 }

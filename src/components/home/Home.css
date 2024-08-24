@@ -1,148 +1,153 @@
-.content{
-    padding-top: 20px;
-    margin-top: 20px;
-    display: flex;
-    align-self: center;
-    flex-direction: column;
+.content {
+  padding-top: 20px;
+  margin-top: 20px;
+  display: flex;
+  align-self: center;
+  flex-direction: column;
 }
 .box1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-	text-align: center;
-    max-width: 1070px;
-    height: 550px;
-    border-radius: 10px;
-    background-image: url("../../assets/images/Semear.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 200px;
-    margin-top: 30px;
-    color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-width: 1070px;
+  height: 550px;
+  border-radius: 10px;
+  background-image: url("../../assets/images/Semear.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 200px;
+  margin-top: 30px;
+  color: aliceblue;
 }
 
-.box1 h1{
-    font-family: 'Meldina', sans-serif;
-    font-size: 50px;
+.box1 h1 {
+  font-family: "Meldina", sans-serif;
+  font-size: 50px;
 }
 
 .box2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-	text-align: center;
-    width: 1070px;
-    height: 550px;
-    border-radius: 10px;
-    background: linear-gradient(150deg, rgba(215,71,139,1) 0%, rgba(4,205,251,1) 50%, rgba(249,233,2,1) 100%); /* linear-gradient(135deg, rgba(255,174,0,1) 15%, rgba(34,193,195,1) 50%, rgba(189,169,206,1) 80%); */ /* linear-gradient(153deg, rgba(238,174,202,1) 26%, rgba(148,187,233,1) 82%); */
-    margin-top: 30px;
-    color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 1070px;
+  height: 550px;
+  border-radius: 10px;
+  background: linear-gradient(
+    150deg,
+    rgba(215, 71, 139, 1) 0%,
+    rgba(4, 205, 251, 1) 50%,
+    rgba(249, 233, 2, 1) 100%
+  ); /* linear-gradient(135deg, rgba(255,174,0,1) 15%, rgba(34,193,195,1) 50%, rgba(189,169,206,1) 80%); */ /* linear-gradient(153deg, rgba(238,174,202,1) 26%, rgba(148,187,233,1) 82%); */
+  margin-top: 30px;
+  color: aliceblue;
 }
-.box2 p{
-    color: black;
-    font-size: 15px;
-    margin-bottom: 10px;
-    margin-top: 10px;
+.box2 p {
+  color: black;
+  font-size: 15px;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
-.spanlink{
-    padding-top: 10px;
+.spanlink {
+  padding-top: 10px;
 }
 
 .box3 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-	text-align: justify;
-    width: 1070px;
-    height: 550px;
-    border-radius: 10px;
-    background-image: url("../../assets/images/Intercecao.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 200px;
-    margin-top: 30px;
-    color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  width: 1070px;
+  height: 550px;
+  border-radius: 10px;
+  background-image: url("../../assets/images/Intercecao.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 200px;
+  margin-top: 30px;
+  color: aliceblue;
 }
-.text-div{
-    padding: 0 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-	text-align: justify;
+.text-div {
+  padding: 0 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
 }
 
-.button1{
-    display: flex;
-    padding-top: 30px;
-    align-items: center;
-    justify-content: center;
+.button1 {
+  display: flex;
+  padding-top: 30px;
+  align-items: center;
+  justify-content: center;
 }
 
 .box4 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-	text-align: center;
-    width: 1070px;
-    height: 550px;
-    border-radius: 10px;
-    background-image: url("../../assets/images/Avalanche.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 200px;
-    margin-top: 30px;
-    color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 1070px;
+  height: 550px;
+  border-radius: 10px;
+  background-image: url("../../assets/images/Avalanche.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 200px;
+  margin-top: 30px;
+  color: aliceblue;
 }
 
 .box5 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-	text-align: center;
-    width: 1070px;
-    height: 250px;
-    border-radius: 10px;
-    background-image: url("../../assets/images/Ministerios.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 200px;
-    margin-top: 30px;
-    color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 1070px;
+  height: 250px;
+  border-radius: 10px;
+  background-image: url("../../assets/images/Ministerios.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 200px;
+  margin-top: 30px;
+  color: aliceblue;
 }
 
 .video-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 30px;
-    max-width: 1070px;
-    height: 550px;
-    border-radius: 10px;
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  max-width: 1070px;
+  height: 550px;
+  border-radius: 10px;
+  position: relative;
 }
 
-.video-container h1{
-    font-family: 'Meldina', sans-serif;
-    font-size: 50px;
+.video-container h1 {
+  font-family: "Meldina", sans-serif;
+  font-size: 50px;
 }
 
-.video-container .button1{
-    display: flex;
-    padding-top: 30px;
-    align-items: center;
-    justify-content: center;
-    z-index: 1;
+.video-container .button1 {
+  display: flex;
+  padding-top: 30px;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
 }
 
 .video-container video {
