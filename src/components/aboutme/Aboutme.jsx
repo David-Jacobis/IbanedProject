@@ -12,7 +12,14 @@ export default function ImgMediaCard(props) {
         <Typography gutterBottom variant="h3" component="div">
           {props.title}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
+        <Typography
+          sx={{
+            height: { xs: "150px", sm: "200px", md: "345px", lg: "280px" },
+          }}
+          variant="body2"
+          fontSize="15px"
+          color="text.secondary"
+        >
           {props.text}
         </Typography>
       </CardContent>

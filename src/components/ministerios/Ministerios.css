@@ -1,0 +1,15 @@
+.Misterios {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  flex-direction: column;
+  color: aliceblue;
+  text-align: justify;
+}
+
+.Misterios h1 {
+  margin-bottom: 2rem;
+  color: aliceblue;
+}

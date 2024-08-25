@@ -130,10 +130,7 @@ function Home() {
             <h1>Conheça nossos Ministérios</h1>
           </div>
           <div className="button1">
-            <Button
-              button="Conheça Aqui"
-              link="https://docs.google.com/spreadsheets/d/1GE1MpSpV3lC-ZLG8JDLJmZ_JqIXWAIQ5B23afzMT84g/edit#gid=0"
-            />
+            <Button button="Conheça Aqui" link="/Ministerios" />
           </div>
         </div>
       </div>

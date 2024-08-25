@@ -33,41 +33,46 @@ function Sobre() {
                 container
                 spacing={2}
                 justifyContent="center"
-                alignItems="center"
+                alignItems="stretch"
               >
                 <Grid item xs={12} sm={6} md={2}>
                   <Aboutme
                     img={PrLeal}
                     title="Pastor Leal"
-                    text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo eveniet rem dignissimos recusandae dolor harum atque cumque corporis quia porro, dolorum natus, sit tenetur placeat aperiam temporibus quo et perferendis."
+                    text="É o pastor presidente da IBANED. Casado com Luzia Leal, eles têm quatro filhos, Edom, Éber, Estêvão e Ester. 
+                    O pastor Leal está na IBANED desde 1986, antes mesmo de sua organização formal como igreja."
                   />
                 </Grid>
                 <Grid item xs={12} sm={6} md={2}>
                   <Aboutme
                     img={PrEber}
                     title="Pastor Eber"
-                    text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo eveniet rem dignissimos recusandae dolor harum atque cumque corporis quia porro, dolorum natus, sit tenetur placeat aperiam temporibus quo et perferendis."
+                    text="Pastor Éber é casado com Adriana Leal e eles têm três filhos, Rafael, Ana Caroline e Guilherme. 
+                    Foi ordenado ao ministério pastoral em 2011 e serve à IBANED em regime de dedicação exclusiva desde então."
                   />
                 </Grid>
                 <Grid item xs={12} sm={6} md={2}>
                   <Aboutme
                     img={PrLuciano}
                     title="Pastor Luciano"
-                    text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo eveniet rem dignissimos recusandae dolor harum atque cumque corporis quia porro, dolorum natus, sit tenetur placeat aperiam temporibus quo et perferendis."
+                    text="Pastor Luciano é casado com Mariele Neves e eles têm dois filhos, Heitor e Henrique. 
+                    Foi ordenado em 2012 e serve à IBANED em regime de dedicaçãoexclusiva desde então."
                   />
                 </Grid>
                 <Grid item xs={12} sm={6} md={2}>
                   <Aboutme
                     img={PrMarcos}
                     title="Pastor Marcos"
-                    text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo eveniet rem dignissimos recusandae dolor harum atque cumque corporis quia porro, dolorum natus, sit tenetur placeat aperiam temporibus quo et perferendis."
+                    text="O pastor Marcos é casado com Ana Paula e têm três filhos, Andressa que é missionária da igreja, Lucas e Matheus. 
+                    Foi ordenado em 2006 e serve ao Senhor na IBANED exercendo um ministério bivocacionado."
                   />
                 </Grid>
                 <Grid item xs={12} sm={6} md={2}>
                   <Aboutme
                     img={PrFabio}
                     title="Pastor Fabio"
-                    text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo eveniet rem dignissimos recusandae dolor harum atque cumque corporis quia porro, dolorum natus, sit tenetur placeat aperiam temporibus quo et perferendis."
+                    text="O pastor Fábio é casado com Débora Silva e eles tem uma filha chamada
+                          Catarina. Foi ordenado em 2018 e serve ao Senhor na IBANED exercendo um ministério bivocacionado."
                   />
                 </Grid>
               </Grid>
