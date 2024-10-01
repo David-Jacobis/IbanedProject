@@ -1,44 +1,40 @@
 .header.header {
-  display: flex;
-  position: fixed;
   box-shadow: 1 2px 5px rgba(0, 0, 0, 0.2);
   width: 100%;
   background: rgb(0, 0, 0, 0.7);
-  z-index: 1;
-}
-.container {
-  max-width: 1280px;
-  margin: auto;
+  padding: 20px 0;
 }
 
-.flex {
-  display: flex; /* Define o container como flexível */
-  justify-content: space-between; /* Espaço entre os itens */
-  align-items: center; /* Alinha os itens verticalmente */
+#logo {
+  width: 100px; /* Defina a largura desejada */
+  height: auto; /* Mantém a proporção da altura automaticamente */
 }
 
-.header .logo {
-  width: 100px; /* Largura da logo (ajuste conforme necessário) */
-  height: auto; /* Altura automática para manter a proporção */
-  margin-left: auto;
+.menu {
+  display: flex;
+  gap: 20px;
 }
 
-.header ul {
-  list-style-type: none; /* Remove os marcadores de lista */
-  padding: 0;
-  margin: 0;
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
 }
 
-.header ul li {
-  display: inline-block; /* Exibe os itens da lista em linha */
-  margin: 0 40px; /* Margem entre os itens */
-}
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .logo {
+    width: 100px; /* Tamanho menor em dispositivos móveis */
+  }
+  .menu.active {
+    display: flex;
+  }
 
-.header ul li a {
-  text-decoration: none; /* Remove a sublinhado dos links */
-  color: #fff; /* Cor do texto */
-}
-
-.header nav ul li a:hover {
-  color: #ccc; /* Cor do texto ao passar o mouse */
+  .menu-icon {
+    display: block; /* Mostra o ícone em telas menores */
+  }
 }

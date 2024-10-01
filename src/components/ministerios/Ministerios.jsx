@@ -3,8 +3,8 @@ import "./Ministerios.css";
 import GridM from "../gridM/gridM";
 import Avalanche from "../../assets/images/Avalanche.jpg";
 import Semear from "../../assets/images/Intercecao.jpg";
+
 import { Container } from "react-bootstrap";
-import { Grid } from "@mui/material";
 
 function Ministerios() {
   return (

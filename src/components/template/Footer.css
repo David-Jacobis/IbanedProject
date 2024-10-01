@@ -1,16 +1,129 @@
-footer.footer {
-  margin-top: auto;
+.footer {
+  background-color: #2d2d2d;
+  padding: 20px 0;
+  color: white;
+}
+
+.footer-section {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.footer-brand,
+.footer-links,
+.footer-connect,
+.footer-newsletter {
+  text-align: justify;
+  flex: 1;
+  margin: 10px;
+}
+
+.footer-connect {
+  align-items: start;
+  justify-content: space-between;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 10px;
+}
+
+.email-input {
+  padding: 10px;
+  flex: 1;
+}
+
+.subscribe-btn {
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.icon {
+  font-size: 40px;
+  color: white;
+}
+
+.custom-input {
+  background: transparent;
+}
+
+.custom-input::placeholder {
+  color: white;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  margin-bottom: 15px; /* Ajuste o valor conforme necessário */
+  display: block;
+}
+
+#instagram {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 25px 0;
-}
-.container {
-  max-width: 1070px;
-  margin: auto;
+  background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+  border-radius: 50%;
+  height: 3rem; /* Ajuste o tamanho do círculo */
+  width: 3rem; /* Ajuste o tamanho do círculo */
   text-align: center;
 }
 
-.tittle {
-  padding: 0 50px;
+#instagram svg {
+  color: white; /* Cor do ícone */
+  font-size: 2rem; /* Tamanho do ícone */
+}
+
+#facebook {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #4267b3;
+  border-radius: 50%;
+  height: 3rem; /* Ajuste o tamanho do círculo */
+  width: 3rem; /* Ajuste o tamanho do círculo */
+  text-align: center;
+}
+
+#facebook svg {
+  color: white; /* Cor do ícone */
+  font-size: 2rem; /* Tamanho do ícone */
+}
+
+#Youtube {
+  color: #ec0909;
+}
+
+#whatszapp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #25d366;
+  border-radius: 50%;
+  height: 3rem; /* Ajuste o tamanho do círculo */
+  width: 3rem; /* Ajuste o tamanho do círculo */
+  text-align: center;
+}
+
+#whatszapp svg {
+  color: white; /* Cor do ícone */
+  font-size: 2rem; /* Tamanho do ícone */
 }
