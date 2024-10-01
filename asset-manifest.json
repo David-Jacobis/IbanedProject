@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/IbanedProject/static/css/main.e79e6852.css",
+    "main.js": "/IbanedProject/static/js/main.9905c98a.js",
+    "static/js/453.7ee9c3be.chunk.js": "/IbanedProject/static/js/453.7ee9c3be.chunk.js",
+    "static/media/Semear.png": "/IbanedProject/static/media/Semear.545cd035b749c62ee5e7.png",
+    "static/media/Ministerios.png": "/IbanedProject/static/media/Ministerios.cf1fa3783884b89645a2.png",
+    "static/media/Intercecao.jpg": "/IbanedProject/static/media/Intercecao.bc26619e3ef168bc948d.jpg",
+    "static/media/Avalanche.jpg": "/IbanedProject/static/media/Avalanche.90ff9e6758da5a425ed4.jpg",
+    "static/media/PrFabio.jpg": "/IbanedProject/static/media/PrFabio.8ce6953471c172f6054c.jpg",
+    "static/media/glyphicons-halflings-regular.svg": "/IbanedProject/static/media/glyphicons-halflings-regular.060b2710bdbbe3dfe48b.svg",
+    "static/media/IbanedIcon.png": "/IbanedProject/static/media/IbanedIcon.fc5042c984cec87aa3fd.png",
+    "static/media/PrEber3.jpg": "/IbanedProject/static/media/PrEber3.760bbc0775105325aac7.jpg",
+    "static/media/PrLeal.jpg": "/IbanedProject/static/media/PrLeal.02c37c6fec218953cae0.jpg",
+    "static/media/PrLu.jpg": "/IbanedProject/static/media/PrLu.6000c2094e83c30c9388.jpg",
+    "static/media/PrMarcos.jpg": "/IbanedProject/static/media/PrMarcos.fe5d3ec08af584363084.jpg",
+    "static/media/glyphicons-halflings-regular.ttf": "/IbanedProject/static/media/glyphicons-halflings-regular.4692b9ec53fd5972caa2.ttf",
+    "static/media/glyphicons-halflings-regular.woff": "/IbanedProject/static/media/glyphicons-halflings-regular.82b1212e45a2bc35dd73.woff",
+    "static/media/glyphicons-halflings-regular.eot": "/IbanedProject/static/media/glyphicons-halflings-regular.5be1347c682810f199c7.eot",
+    "static/media/glyphicons-halflings-regular.woff2": "/IbanedProject/static/media/glyphicons-halflings-regular.be810be3a3e14c682a25.woff2",
+    "index.html": "/IbanedProject/index.html",
+    "main.e79e6852.css.map": "/IbanedProject/static/css/main.e79e6852.css.map",
+    "main.9905c98a.js.map": "/IbanedProject/static/js/main.9905c98a.js.map",
+    "453.7ee9c3be.chunk.js.map": "/IbanedProject/static/js/453.7ee9c3be.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e79e6852.css",
+    "static/js/main.9905c98a.js"
+  ]
+}
