@@ -1,6 +1,9 @@
 import "./Home.css";
 import React from "react";
-import { Divider, Flex, Card, Col, Row } from "antd";
+
+import imagemTeste from "../../assets/images/Intercecao.jpg";
+import { motion } from "framer-motion";
+import { Divider, Flex, Card, Col, Row, Button } from "antd";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import Button from "../button/Button";
@@ -17,46 +20,124 @@ function Home() {
         <Divider />
         <div className="Group2">
           <h4>QUEM SOMOS?</h4>
-          <h1><strong>DESCUBRA QUEM SOMOS</strong></h1>
+          <h1>
+            <strong>DESCUBRA QUEM SOMOS</strong>
+          </h1>
           <Row gutter={[16, 16]} justify="center">
             <Col xs={24} sm={12} md={8}>
-              <Card size="default" className="CardGroup2">
-                <Flex vertical justify="start" align="center">
-                  <FontAwesomeIcon icon={faWhatsapp} size="2x" />
-                  <h2><strong>SOBRE NÓS</strong></h2>
+              <Card className="CardGroup2">
+                <div className="CardContent">
+                  <FontAwesomeIcon
+                    icon={faWhatsapp}
+                    size="2x"
+                    className="CardIcon"
+                  />
+                  <h2>
+                    <strong>SOBRE NÓS</strong>
+                  </h2>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Animi, dolorum aliquam architecto quidem facere saepe ipsa
-                    voluptate officiis dolorem laborum et eos atque, sapiente
-                    omnis veritatis ipsam earum at itaque.
+                    Raízes e Tradições Explore a trajetória e os marcos
+                    importantes que moldaram nossa igreja ao longo dos anos.
                   </p>
-                </Flex>
-              </Card>
-            </Col>
-            <Col xs={24} sm={12} md={8}>
-              <Card size="default" className="CardGroup2">
-                <FontAwesomeIcon icon={faWhatsapp} size="2x" />
-                <h2><strong>SOBRE NÓS</strong></h2>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Animi, dolorum aliquam architecto quidem facere saepe ipsa
-                  voluptate officiis dolorem laborum et eos atque, sapiente
-                  omnis veritatis ipsam earum at itaque.
-                </p>
-              </Card>
-            </Col>
-            <Col xs={24} sm={12} md={8}>
-              <Card size="default" className="CardGroup2">
-                <FontAwesomeIcon icon={faWhatsapp} size="2x" />
-                <h2><strong>SOBRE NÓS</strong></h2>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Animi, dolorum aliquam architecto quidem facere saepe ipsa
-                  voluptate officiis dolorem laborum et eos atque, sapiente
-                  omnis veritatis ipsam earum at itaque.
-                </p>
+                </div>
               </Card>
               <div className="CardGroup2Footer"></div>
+            </Col>
+
+            <Col xs={24} sm={12} md={8}>
+              <Card className="CardGroup2">
+                <div className="CardContent">
+                  <FontAwesomeIcon
+                    icon={faWhatsapp}
+                    size="2x"
+                    className="CardIcon"
+                  />
+                  <h2>
+                    <strong>FAÇA PARTE</strong>
+                  </h2>
+                  <p>
+                    Participe e Cresça Conosco. Conheça as oportunidades de
+                    envolvimento e descubra como você pode se integrar à nossa
+                    família espiritual.
+                  </p>
+                </div>
+              </Card>
+              <div className="CardGroup2Footer"></div>
+            </Col>
+
+            <Col xs={24} sm={12} md={8}>
+              <Card className="CardGroup2">
+                <div className="CardContent">
+                  <FontAwesomeIcon
+                    icon={faWhatsapp}
+                    size="2x"
+                    className="CardIcon"
+                  />
+                  <h2>
+                    <strong>NOSSA MISSÃO</strong>
+                  </h2>
+                  <p>
+                    Unidos na Fé e no Amor. Descubra os objetivos e valores que
+                    guiam nossa comunidade e como buscamos fazer a diferença no
+                    mundo.
+                  </p>
+                </div>
+              </Card>
+              <div className="CardGroup2Footer"></div>
+            </Col>
+          </Row>
+          <Flex vertical>
+            <h2>Sub-headline</h2>
+            <h1>
+              <strong>AMOR E COMPAIXÃO</strong>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Explicabo accusamus sunt inventore sapiente quia dicta.
+                Consequuntur mollitia quaerat cupiditate, perspiciatis qui,
+                omnis et hic voluptas obcaecati minima expedita iste maxime?
+              </p>
+            </h1>
+          </Flex>
+          <Row gutter={[16, 16]} justify="center">
+            <Col xs={24} sm={12} md={8}>
+              <motion.div
+                whileHover={{ scale: 1.1 }}
+                transition={{ duration: 0.3 }}
+              >
+                <img
+                  className="ImgCardCouple"
+                  alt="example"
+                  src={imagemTeste}
+                  style={{ objectFit: "cover"}}
+                />
+              </motion.div>
+            </Col>
+            <Col xs={24} sm={12} md={8}>
+              <Button>SAIBA MAIS</Button>
+              <motion.div
+                whileHover={{ scale: 1.1 }}
+                transition={{ duration: 0.3 }}
+              >
+                <img
+                  className="ImgCardGroup"
+                  alt="example"
+                  src={imagemTeste}
+                  style={{objectFit: "cover" }}
+                />
+              </motion.div>
+            </Col>
+            <Col xs={24} sm={12} md={8}>
+              <motion.div
+                whileHover={{ scale: 1.1 }}
+                transition={{ duration: 0.3 }}
+              >
+                <img
+                  className="ImgCardCouple"
+                  alt="example"
+                  src={imagemTeste}
+                  style={{ objectFit: "cover" }}
+                />
+              </motion.div>
             </Col>
           </Row>
         </div>
