@@ -1,6 +1,25 @@
 .content{
   margin: 10px;
 }
+
+.Group2{
+  background-color: #ffffff;
+  padding: 70px;
+}
+
+.CardGroup2{
+  background-color: #fdfee8;
+  border-radius: 0%;
+  height: 400px;
+}
+
+.CardGroup2Footer{
+  width: 100%;
+  height: 15px;
+  margin: 10px 0;
+  background-color: #e7ce0b;
+}
+
 .box1 {
   display: flex;
   flex-direction: column;

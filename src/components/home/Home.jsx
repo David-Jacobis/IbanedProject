@@ -1,5 +1,8 @@
 import "./Home.css";
 import React from "react";
+import { Divider, Flex, Card, Col, Row } from "antd";
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import Button from "../button/Button";
 // import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 // import YouTubeIcon from "@mui/icons-material/YouTube";
@@ -11,9 +14,52 @@ function Home() {
   return (
     <React.Fragment>
       <div className="content">
-        <h1>
-          Teste
-        </h1>
+        <Divider />
+        <div className="Group2">
+          <h4>QUEM SOMOS?</h4>
+          <h1><strong>DESCUBRA QUEM SOMOS</strong></h1>
+          <Row gutter={[16, 16]} justify="center">
+            <Col xs={24} sm={12} md={8}>
+              <Card size="default" className="CardGroup2">
+                <Flex vertical justify="start" align="center">
+                  <FontAwesomeIcon icon={faWhatsapp} size="2x" />
+                  <h2><strong>SOBRE NÓS</strong></h2>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Animi, dolorum aliquam architecto quidem facere saepe ipsa
+                    voluptate officiis dolorem laborum et eos atque, sapiente
+                    omnis veritatis ipsam earum at itaque.
+                  </p>
+                </Flex>
+              </Card>
+            </Col>
+            <Col xs={24} sm={12} md={8}>
+              <Card size="default" className="CardGroup2">
+                <FontAwesomeIcon icon={faWhatsapp} size="2x" />
+                <h2><strong>SOBRE NÓS</strong></h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Animi, dolorum aliquam architecto quidem facere saepe ipsa
+                  voluptate officiis dolorem laborum et eos atque, sapiente
+                  omnis veritatis ipsam earum at itaque.
+                </p>
+              </Card>
+            </Col>
+            <Col xs={24} sm={12} md={8}>
+              <Card size="default" className="CardGroup2">
+                <FontAwesomeIcon icon={faWhatsapp} size="2x" />
+                <h2><strong>SOBRE NÓS</strong></h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Animi, dolorum aliquam architecto quidem facere saepe ipsa
+                  voluptate officiis dolorem laborum et eos atque, sapiente
+                  omnis veritatis ipsam earum at itaque.
+                </p>
+              </Card>
+              <div className="CardGroup2Footer"></div>
+            </Col>
+          </Row>
+        </div>
         {/* <div className="box1">
                 <div className="text-div">
                     <h1>Semear</h1>
