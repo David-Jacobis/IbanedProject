@@ -1,10 +1,9 @@
 {
   "files": {
-    "main.css": "/IbanedProject/static/css/main.e79e6852.css",
-    "main.js": "/IbanedProject/static/js/main.9905c98a.js",
+    "main.css": "/IbanedProject/static/css/main.d134e950.css",
+    "main.js": "/IbanedProject/static/js/main.90fa0ac9.js",
     "static/js/453.7ee9c3be.chunk.js": "/IbanedProject/static/js/453.7ee9c3be.chunk.js",
-    "static/media/Semear.png": "/IbanedProject/static/media/Semear.545cd035b749c62ee5e7.png",
-    "static/media/Ministerios.png": "/IbanedProject/static/media/Ministerios.cf1fa3783884b89645a2.png",
+    "static/media/Biblia.MP4": "/IbanedProject/static/media/Biblia.b42d856ab9da300ea67b.MP4",
     "static/media/Intercecao.jpg": "/IbanedProject/static/media/Intercecao.bc26619e3ef168bc948d.jpg",
     "static/media/Avalanche.jpg": "/IbanedProject/static/media/Avalanche.90ff9e6758da5a425ed4.jpg",
     "static/media/PrFabio.jpg": "/IbanedProject/static/media/PrFabio.8ce6953471c172f6054c.jpg",
@@ -19,12 +18,12 @@
     "static/media/glyphicons-halflings-regular.eot": "/IbanedProject/static/media/glyphicons-halflings-regular.5be1347c682810f199c7.eot",
     "static/media/glyphicons-halflings-regular.woff2": "/IbanedProject/static/media/glyphicons-halflings-regular.be810be3a3e14c682a25.woff2",
     "index.html": "/IbanedProject/index.html",
-    "main.e79e6852.css.map": "/IbanedProject/static/css/main.e79e6852.css.map",
-    "main.9905c98a.js.map": "/IbanedProject/static/js/main.9905c98a.js.map",
+    "main.d134e950.css.map": "/IbanedProject/static/css/main.d134e950.css.map",
+    "main.90fa0ac9.js.map": "/IbanedProject/static/js/main.90fa0ac9.js.map",
     "453.7ee9c3be.chunk.js.map": "/IbanedProject/static/js/453.7ee9c3be.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e79e6852.css",
-    "static/js/main.9905c98a.js"
+    "static/css/main.d134e950.css",
+    "static/js/main.90fa0ac9.js"
   ]
 }
