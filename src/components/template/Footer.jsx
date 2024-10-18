@@ -19,7 +19,9 @@ const Footer = () => {
               <h3>
                 <strong>ibaned</strong>
               </h3>
-              <p>© GBDJ LTDA</p>
+              <p>Copyright © 2024 IGREJA BATISTA ESTRELA DALVA.</p>
+              <p>All rights reserved.</p>
+              
               <p>(31) 2526-4248</p>
               <p>Av. Raul Mourão Guimarães, 740</p>
               <p>Palmeiras, Belo Horizonte - MG,</p>

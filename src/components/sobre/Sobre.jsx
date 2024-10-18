@@ -18,8 +18,8 @@ function Sobre() {
         <Container maxWidth="mt">
           <section>
             <div className="contentSobre">
-              <h4>Igreja Batista Estrela Dalva</h4>
-              <h3>Sobre nós</h3>
+              <h2>IGREJA BATISTA ESTRELA DALVA</h2>
+              <h3>SOBRE NÓS</h3>
               <p>
                 A IBANED é uma igreja congregacional de modelo representativo.
                 Filiada à Convenção Batista Nacional, é liderada por um Conselho
@@ -81,7 +81,7 @@ function Sobre() {
           </section>
           <section>
             <div className="contentSobreH">
-              <h2>Nossa História</h2>
+              <h2>NOSSA HISTÓRIA</h2>
               <p>
                 A Igreja Batista Nacional Estrela D'alva, chamada por seus
                 membros e amigos de IBANED, começou a partir de uma reunião de
@@ -130,7 +130,7 @@ function Sobre() {
           </section>
           <section>
             <div className="Location">
-              <h2>Veja Nossa Localização</h2>
+              <h2>NOSSA LOCALIZAÇÃO</h2>
               <div className="map-container">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3749.980197180699!2d-43.977176923982114!3d-19.967335039473866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa697d054c41631%3A0xb6b7c7a7086340bb!2sIBANED%20-%20Igreja%20Batista%20Estrela%20D&#39;

@@ -294,3 +294,53 @@ content .p {
   color: #555;
   margin-top: 10px;
 }
+
+@media (max-width: 768px) {
+  .StyledFlex-Content {
+    width: 80%;
+    padding: 20px;
+  }
+
+  .StyledFlex-Content h1 {
+    font-size: 1.8rem; /* Reduzindo o tamanho do título */
+  }
+
+  .StyledFlex-Content p {
+    font-size: 1rem; /* Reduzindo o tamanho do texto */
+  }
+
+  .StyledFlex {
+    height: auto; /* Ajustando a altura */
+    padding: 15px;
+  }
+
+  .CardGroup2 h2{
+    font-size: 1.5rem;
+  }
+  .CardGroup2 h1{
+    font-size: 1.8rem;
+  }
+}
+
+/* Ajustes para telas muito pequenas (celulares) */
+@media (max-width: 480px) {
+  .StyledFlex-Content {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .StyledFlex-Content h1 {
+    font-size: 1.5rem; /* Reduzindo ainda mais o título */
+  }
+
+  .StyledFlex-Content p {
+    font-size: 0.9rem; /* Reduzindo o texto */
+  }
+
+  .CardGroup2 h2{
+    font-size: 1.2rem;
+  }
+  .CardGroup2 h1{
+    font-size: 1.5rem;
+  }
+}

@@ -200,10 +200,12 @@ const Home = () => {
                     className="CardIcon"
                     style={{ color: "#2cc8f7" }}
                   />
-                  <h2>DESENVOLVENDO SEUS DONS E</h2>
-                  <h1>
-                    <strong>MINISTÉRIOS</strong>
-                  </h1>
+                  <Flex vertical>
+                    <h2>DESENVOLVENDO SEUS DONS E</h2>
+                    <h1>
+                      <strong>MINISTÉRIOS</strong>
+                    </h1>
+                  </Flex>
                 </div>
               </Card>
               <div
@@ -247,7 +249,11 @@ const Home = () => {
               icon={faQuoteLeft}
               size="3x"
               className="CardIcon"
-              style={{ color: "#A78BFA", marginTop: "20px", alignSelf: 'flex-start' }} // Estilizando as aspas
+              style={{
+                color: "#A78BFA",
+                marginTop: "20px",
+                alignSelf: "flex-start",
+              }} // Estilizando as aspas
             />
             <p>
               Queremos servir o mundo ao nosso redor, pois fomos chamados a ser
@@ -269,7 +275,11 @@ const Home = () => {
               icon={faQuoteRight}
               size="3x"
               className="CardIcon2"
-              style={{ color: "#A78BFA", marginTop: "20px", alignSelf: 'flex-end' }}
+              style={{
+                color: "#A78BFA",
+                marginTop: "20px",
+                alignSelf: "flex-end",
+              }}
             />
           </div>
         </div>
