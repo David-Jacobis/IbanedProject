@@ -1,6 +1,6 @@
 import React from "react";
 import "./Ministerios.css";
-import GridM from "../gridM/gridM";
+import GridM from "../atoms/gridM/gridM"
 import Avalanche from "../../assets/images/Avalanche.jpg";
 import Semear from "../../assets/images/Intercecao.jpg";
 
