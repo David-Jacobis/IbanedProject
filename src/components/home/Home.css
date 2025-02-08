@@ -344,3 +344,57 @@ content .p {
     font-size: 1.5rem;
   }
 }
+
+@media (max-width: 992px) {
+  .StyledFlex-Content {
+    width: 80%;
+    padding: 20px;
+  }
+
+  .StyledFlex-Content h1 {
+    font-size: 1.8rem; /* Reduzindo o tamanho do título */
+  }
+
+  .StyledFlex-Content p {
+    font-size: 1rem; /* Reduzindo o tamanho do texto */
+  }
+
+  .StyledFlex {
+    height: auto; /* Ajustando a altura */
+    padding: 15px;
+  }
+
+  .CardGroup2 h2{
+    font-size: 1.5rem;
+  }
+  .CardGroup2 h1{
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .StyledFlex-Content {
+    width: 80%;
+    padding: 20px;
+  }
+
+  .StyledFlex-Content h1 {
+    font-size: 1.8rem; /* Reduzindo o tamanho do título */
+  }
+
+  .StyledFlex-Content p {
+    font-size: 1rem; /* Reduzindo o tamanho do texto */
+  }
+
+  .StyledFlex {
+    height: auto; /* Ajustando a altura */
+    padding: 15px;
+  }
+
+  .CardGroup2 h2{
+    font-size: 1.5rem;
+  }
+  .CardGroup2 h1{
+    font-size: 1.8rem;
+  }
+}

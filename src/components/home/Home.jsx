@@ -1,7 +1,7 @@
 import "./Home.css";
 import React from "react";
 import VideoSemear from "../../assets/images/Biblia.MP4";
-
+import ScrollLinked from "../atoms/scroll/Scroll";
 import { motion } from "framer-motion";
 import { useState, useRef } from "react";
 import { Flex, Card, Col, Row } from "antd";
@@ -33,6 +33,7 @@ const Home = () => {
 
   return (
     <React.Fragment>
+      <ScrollLinked/>
       <div className="content">
         <div
           className="VideoCard-Wrapper"
