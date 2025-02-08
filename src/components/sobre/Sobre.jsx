@@ -3,7 +3,7 @@ import React from "react";
 import "./Sobre.css";
 import Container from "@mui/material/Container";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Aboutme from "../aboutme/Aboutme";
+import Aboutme from "../atoms/aboutme/Aboutme";
 import PrLeal from "../../assets/images/PrLeal.jpg";
 import PrEber from "../../assets/images/PrEber3.jpg";
 import PrLuciano from "../../assets/images/PrLu.jpg";
@@ -40,7 +40,7 @@ function Sobre() {
                   <Aboutme
                     img={PrLeal}
                     title="Pastor Leal"
-                    text="É o pastor presidente da IBANED. Casado com Luzia Leal, eles têm quatro filhos, Edom, Éber, Estêvão e Ester. 
+                    text="É o Pastor Emérito da IBANED. Casado com Luzia Leal, eles têm quatro filhos, Edom, Éber, Estêvão e Ester. 
                     O pastor Leal está na IBANED desde 1986, antes mesmo de sua organização formal como igreja."
                   />
                 </Grid>
@@ -48,7 +48,7 @@ function Sobre() {
                   <Aboutme
                     img={PrEber}
                     title="Pastor Eber"
-                    text="Pastor Éber é casado com Adriana Leal e eles têm três filhos, Rafael, Ana Caroline e Guilherme. 
+                    text="Pastor Éber é o Pastor Presidente casado com Adriana Leal e eles têm três filhos, Rafael, Ana Caroline e Guilherme. 
                     Foi ordenado ao ministério pastoral em 2011 e serve à IBANED em regime de dedicação exclusiva desde então."
                   />
                 </Grid>
@@ -56,7 +56,7 @@ function Sobre() {
                   <Aboutme
                     img={PrLuciano}
                     title="Pastor Luciano"
-                    text="Pastor Luciano é casado com Mariele Neves e eles têm dois filhos, Heitor e Henrique. 
+                    text="Pastor Luciano é casado com Mariele Neves e eles têm três filhos, Heitor, Henrique e Arthur. 
                     Foi ordenado em 2012 e serve à IBANED em regime de dedicaçãoexclusiva desde então."
                   />
                 </Grid>
