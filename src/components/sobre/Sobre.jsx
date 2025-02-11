@@ -57,7 +57,7 @@ function Sobre() {
                     img={PrLuciano}
                     title="Pastor Luciano"
                     text="Pastor Luciano é casado com Mariele Neves e eles têm três filhos, Heitor, Henrique e Arthur. 
-                    Foi ordenado em 2012 e serve à IBANED em regime de dedicaçãoexclusiva desde então."
+                    Foi ordenado em 2012 e serve à IBANED em regime de dedicação exclusiva desde então."
                   />
                 </Grid>
                 <Grid item xs={12} sm={6} md={2}>
