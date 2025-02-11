@@ -1,13 +1,10 @@
 import "./Home.css";
 import React from "react";
-import VideoSemear from "../../assets/images/Biblia.MP4";
 import ScrollLinked from "../atoms/scroll/Scroll";
+
 import { motion } from "framer-motion";
-import { useState, useRef } from "react";
 import { Flex, Card, Col, Row } from "antd";
 import {
-  faVolumeMute,
-  faVolumeUp,
   faCross,
   faPeopleRoof,
   faChurch,
@@ -20,105 +17,68 @@ import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Home = () => {
-  const [isMuted, setIsMuted] = useState(true); // Estado para controlar o som
-  const videoRef = useRef(null); // Referência para o vídeo
-
-  // Função para alternar o som
-  const toggleMute = () => {
-    if (videoRef.current) {
-      videoRef.current.muted = !isMuted;
-      setIsMuted(!isMuted);
-    }
-  };
 
   return (
     <React.Fragment>
-      <ScrollLinked/>
+      <ScrollLinked />
       <div className="content">
-        <div
-          className="VideoCard-Wrapper"
-          style={{ position: "relative", width: "100%", height: "70vh" }}
-        >
-          <video
-            ref={videoRef}
-            autoPlay
-            loop
-            muted={isMuted}
-            style={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              width: "100%",
-              height: "100%",
-              objectFit: "cover", // Coloca o vídeo no fundo
-            }}
-          >
-            <source src={VideoSemear} type="video/mp4" />
-          </video>
-
-          <button
-            onClick={toggleMute}
-            style={{
-              position: "absolute",
-              top: "20px",
-              right: "20px",
-              background: "transparent",
-              border: "none",
-              color: "#fff",
-              fontSize: "24px",
-              cursor: "pointer",
-              zIndex: 2, // Coloca o botão acima do vídeo
-            }}
-          >
-            <FontAwesomeIcon icon={isMuted ? faVolumeMute : faVolumeUp} />
-          </button>
-          <Flex
-            className="Flex-Text-Wrap MobileCenter"
-            vertical
-            justify="flex-start"
-            align="flex-start"
-            style={{
-              zIndex: 1,
-              position: "relative",
-              height: "100%",
-              padding: "24px 44px",
-            }}
-            gap="middle"
-          >
-            <h3>BEM-VINDO À NOSSA IGREJA</h3>
-            <h1>2024 É O ANO DE SEMEAR</h1>
-            <Flex
-              vertical
-              justify="center"
-              align="flex-start"
-              className="Flex-Text-Content"
-            >
-              <p>
-                Porque o que semeia para a sua própria carne da carne colherá
-                corrupção mas o que semeia para o Espírito do Espírito colherá
-                vida eterna.E não nos cansemos de fazer o bem, porque a seu
-                tempo ceifaremos, se
-              </p>
-              <p>
-                não desfalecermos.Por isso, enquanto tivermos oportunidade,
-                façamos o bem a todos, mas principalmente aos da família da fé.
-              </p>
-              <p>Gálatas 6:8-10</p>
-            </Flex>
-            <motion.a
-              className="Motionbutton"
-              whileHover={{ scale: 1.1 }}
-              href="https://wa.me/553125264248"
-              target="_blank" // Abre o link em uma nova aba
-              rel="noopener noreferrer"
-            >
-              <span className="ButtonContent">
-                <FontAwesomeIcon icon={faWhatsapp} />
-                MANDE SUA MENSAGEM
-              </span>
-            </motion.a>
-          </Flex>
+        <div className="StyledFlex">
+          <div className="StyledFlex-Content">
+            <h1>
+              QUEREMOS <br />
+              SERVIR O MUNDO
+              <br /> AO NOSSO REDOR
+            </h1>
+            <FontAwesomeIcon
+              icon={faQuoteLeft}
+              size="3x"
+              className="CardIcon"
+              style={{
+                color: "#A78BFA",
+                marginTop: "20px",
+                alignSelf: "flex-start",
+              }} // Estilizando as aspas
+            />
+            <p>
+              Queremos servir o mundo ao nosso redor, pois fomos chamados a ser
+              luz e sal na Terra (Mateus 5:13-14). A fé cristã nos ensina que o
+              amor ao próximo é o maior mandamento depois de amar a Deus (Mateus
+              22:37-39). Servir é um ato de obediência e gratidão, pois “o Filho
+              do Homem não veio para ser servido, mas para servir” (Marcos
+              10:45). Ao cuidar dos necessitados, estamos servindo ao próprio
+              Cristo, como Ele disse: "Tudo o que fizerem a um destes meus
+              pequeninos irmãos, a mim o fizeram" (Mateus 25:40). Nosso chamado
+              é impactar vidas com gestos de compaixão, justiça e bondade. Assim
+              como Jesus lavou os pés de seus discípulos (João 13:14-15),
+              devemos seguir Seu exemplo de humildade e serviço. Em cada ato de
+              amor, refletimos o coração de Deus, levando esperança e
+              transformação ao mundo. Que possamos viver como instrumentos da
+              Sua paz e justiça, sendo mãos e pés de Cristo em nosso cotidiano.
+            </p>
+            <FontAwesomeIcon
+              icon={faQuoteRight}
+              size="3x"
+              className="CardIcon2"
+              style={{
+                color: "#A78BFA",
+                marginTop: "20px",
+                alignSelf: "flex-end",
+              }}
+            />
+          </div>
         </div>
+        <motion.a
+          className="Motionbutton"
+          whileHover={{ scale: 1.1 }}
+          href="https://wa.me/553125264248"
+          target="_blank" // Abre o link em uma nova aba
+          rel="noopener noreferrer"
+        >
+          <span className="ButtonContent">
+            <FontAwesomeIcon icon={faWhatsapp} />
+            MANDE SUA MENSAGEM
+          </span>
+        </motion.a>
         <div className="Group2">
           <h4>QUEM SOMOS?</h4>
           <h1>
