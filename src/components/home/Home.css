@@ -71,29 +71,6 @@ content .p {
   font-size: 5rem;
 }
 
-.Motionbutton {
-  display: inline-block;
-  outline: none;
-  cursor: pointer;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 600;
-  border-radius: 8px;
-  padding: 14px 24px;
-  border: none;
-  transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s,
-    -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s;
-  background: linear-gradient(to right, #f9fafb 0%, #e5e7eb 50%, #9ca3af 100%);
-  color: #0d1117;
-}
-
-.ButtonContent {
-  display: inline-flex; /* Alinha o ícone e o texto */
-  align-items: center;
-  gap: 8px; /* Adiciona o espaçamento entre o ícone e o texto */
-  color: #0d1117;
-}
-
 .Flex-Text-Wrap h3,
 .Flex-Text-Wrap p {
   color: #fff; /* Define a cor do texto como branca */
@@ -114,18 +91,15 @@ content .p {
   font-weight: 600;
   border-radius: 8px;
   padding: 14px 24px;
-  border: none;
-  transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s,
-    -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s;
-  background: linear-gradient(to right, #f9fafb 0%, #e5e7eb 50%, #9ca3af 100%);
-  color: #0d1117;
+  border: 1px solid #000000;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .ButtonContent {
   display: inline-flex; /* Alinha o ícone e o texto */
   align-items: center;
   gap: 8px; /* Adiciona o espaçamento entre o ícone e o texto */
-  color: #0d1117;
+  color: #ffffff;
 }
 
 /* Dispositivos muito pequenos (menos de 576px) */
@@ -256,12 +230,25 @@ content .p {
   margin-top: 120px;
 }
 
+.StyledFlexHome{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  background-image: url("../../assets/images/2025\ \ ANO\ DE\ fazer.png"); /* Caminho da imagem */
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  width: 100%;
+  padding: 20px;
+}
+
 .StyledFlex {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url("../../assets/images/Avalanche.jpg"); /* Caminho da imagem */
+  background-image: url("../../assets/images/MatheusBiblia.jpg"); /* Caminho da imagem */
   background-size: cover;
   background-position: center;
   height: 80vh;
@@ -314,11 +301,20 @@ content .p {
     padding: 15px;
   }
 
+  .StyledFlexHome {
+    height: 30vh; /* Ajustando a altura */
+    padding: 15px;
+  }
+
   .CardGroup2 h2{
     font-size: 1.5rem;
   }
   .CardGroup2 h1{
     font-size: 1.8rem;
+  }
+
+  .Motionbutton{
+    font-size: 10px;
   }
 }
 
@@ -343,6 +339,14 @@ content .p {
   .CardGroup2 h1{
     font-size: 1.5rem;
   }
+
+  .StyledFlexHome{
+    height: 30vh;
+  }
+
+  .Motionbutton{
+    font-size: 10px;
+  }
 }
 
 @media (max-width: 992px) {
@@ -361,6 +365,11 @@ content .p {
 
   .StyledFlex {
     height: auto; /* Ajustando a altura */
+    padding: 15px;
+  }
+
+  .StyledFlexHome {
+    height: 30vh; /* Ajustando a altura */
     padding: 15px;
   }
 
@@ -388,6 +397,11 @@ content .p {
 
   .StyledFlex {
     height: auto; /* Ajustando a altura */
+    padding: 15px;
+  }
+
+  .StyledFlexHome {
+    height: 30vh; /* Ajustando a altura */
     padding: 15px;
   }
 

@@ -17,68 +17,24 @@ import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Home = () => {
-
   return (
     <React.Fragment>
       <ScrollLinked />
       <div className="content">
-        <div className="StyledFlex">
-          <div className="StyledFlex-Content">
-            <h1>
-              QUEREMOS <br />
-              SERVIR O MUNDO
-              <br /> AO NOSSO REDOR
-            </h1>
-            <FontAwesomeIcon
-              icon={faQuoteLeft}
-              size="3x"
-              className="CardIcon"
-              style={{
-                color: "#A78BFA",
-                marginTop: "20px",
-                alignSelf: "flex-start",
-              }} // Estilizando as aspas
-            />
-            <p>
-              Queremos servir o mundo ao nosso redor, pois fomos chamados a ser
-              luz e sal na Terra (Mateus 5:13-14). A fé cristã nos ensina que o
-              amor ao próximo é o maior mandamento depois de amar a Deus (Mateus
-              22:37-39). Servir é um ato de obediência e gratidão, pois “o Filho
-              do Homem não veio para ser servido, mas para servir” (Marcos
-              10:45). Ao cuidar dos necessitados, estamos servindo ao próprio
-              Cristo, como Ele disse: "Tudo o que fizerem a um destes meus
-              pequeninos irmãos, a mim o fizeram" (Mateus 25:40). Nosso chamado
-              é impactar vidas com gestos de compaixão, justiça e bondade. Assim
-              como Jesus lavou os pés de seus discípulos (João 13:14-15),
-              devemos seguir Seu exemplo de humildade e serviço. Em cada ato de
-              amor, refletimos o coração de Deus, levando esperança e
-              transformação ao mundo. Que possamos viver como instrumentos da
-              Sua paz e justiça, sendo mãos e pés de Cristo em nosso cotidiano.
-            </p>
-            <FontAwesomeIcon
-              icon={faQuoteRight}
-              size="3x"
-              className="CardIcon2"
-              style={{
-                color: "#A78BFA",
-                marginTop: "20px",
-                alignSelf: "flex-end",
-              }}
-            />
-          </div>
+        <div className="StyledFlexHome">
+          <motion.a
+            className="Motionbutton"
+            whileHover={{ scale: 1.1 }}
+            href="https://wa.me/553125264248"
+            target="_blank" // Abre o link em uma nova aba
+            rel="noopener noreferrer"
+          >
+            <span className="ButtonContent">
+              <FontAwesomeIcon icon={faWhatsapp} />
+              MANDE SUA MENSAGEM
+            </span>
+          </motion.a>
         </div>
-        <motion.a
-          className="Motionbutton"
-          whileHover={{ scale: 1.1 }}
-          href="https://wa.me/553125264248"
-          target="_blank" // Abre o link em uma nova aba
-          rel="noopener noreferrer"
-        >
-          <span className="ButtonContent">
-            <FontAwesomeIcon icon={faWhatsapp} />
-            MANDE SUA MENSAGEM
-          </span>
-        </motion.a>
         <div className="Group2">
           <h4>QUEM SOMOS?</h4>
           <h1>
