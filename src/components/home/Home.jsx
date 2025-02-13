@@ -155,6 +155,22 @@ const Home = () => {
             </Col>
           </Row>
         </div>
+        <div className="StyledFlexPg">
+          <div className="StyledFlexPg-Content">
+            <h1>CÉLULA</h1> 
+            <p>Célula é um pequeno grupo de pessoas que se reúne regularmente para comunhão, estudo da palavra, oração e apoio.</p>
+            <motion.a
+            className="MotionbuttonPg"
+            whileHover={{ scale: 1.1 }}
+            href="/Celulas"
+            rel="noopener noreferrer"
+          >
+            <span className="ButtonContent">
+              SAIBA MAIS
+            </span>
+          </motion.a>
+          </div>
+        </div>
         <div className="StyledFlex">
           <div className="StyledFlex-Content">
             <h1>
