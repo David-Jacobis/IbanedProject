@@ -10,10 +10,14 @@
   padding: 24px 0;
 }
 
-.sobre-pillars,
-.practice-grid {
+.sobre-pillars{
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+.practice-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 20px;
 }
 
@@ -32,8 +36,20 @@
 
 .pastors-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 20px;
+}
+
+.pastors-grid > * {
+  grid-column: span 2;
+}
+
+.pastors-grid > *:nth-child(4) {
+  grid-column: 2 / span 2;
+}
+
+.pastors-grid > *:nth-child(5) {
+  grid-column: 4 / span 2;
 }
 
 .sobre-history-shell .history-card {
@@ -65,10 +81,28 @@
 @media (max-width: 900px) {
   .sobre-pillars,
   .practice-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .pastors-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .pastors-grid > *,
+  .pastors-grid > *:nth-child(4),
+  .pastors-grid > *:nth-child(5) {
+    grid-column: auto;
   }
 
   .sobre-history-shell .history-card {
     padding: 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .pastors-grid,
+  .sobre-pillars,
+  .practice-grid {
+    grid-template-columns: 1fr;
   }
 }

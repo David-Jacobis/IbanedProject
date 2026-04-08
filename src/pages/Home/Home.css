@@ -16,9 +16,7 @@
 .home-hero-copy {
   padding: 52px;
   border-radius: var(--radius-lg);
-  background:
-    linear-gradient(rgba(19, 16, 12, 0.48), rgba(19, 16, 12, 0.58)),
-    url("../../assets/images/2025\ \ ANO\ DE\ fazer.png") center/cover;
+  background: linear-gradient(135deg, #2d261f 0%, #1f1a15 45%, #4f3e27 100%);
   color: var(--color-text-on-dark);
   text-align: left;
   box-shadow: var(--color-shadow);
