@@ -9,7 +9,13 @@ export default function GridCard({ title, image, text }) {
       </div>
       <div className="grid-card-body">
         <div className="grid-card-image-wrap">
-          <img src={image} alt={title} className="grid-card-image" />
+          <img
+            src={image}
+            alt={title}
+            className="grid-card-image"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
         <div className="grid-card-copy">
           <p className="grid-card-text">{text}</p>

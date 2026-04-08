@@ -47,7 +47,12 @@ const ProgramacaoPage = () => {
                 </div>
 
                 <div className="programacao-card-image">
-                  <img src={item.image} alt={item.title} />
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </div>
               </article>
             ))}
