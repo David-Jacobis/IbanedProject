@@ -68,6 +68,7 @@ const Footer = () => {
                 aria-label={link.label}
               >
                 <FontAwesomeIcon icon={iconById[link.id]} size="lg" />
+                <span>{link.label}</span>
               </a>
             ))}
           </div>
