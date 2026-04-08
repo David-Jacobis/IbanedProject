@@ -1,41 +1,94 @@
 :root {
-  --bg-dark: #000000;
-  --header-height: 50px;
-  --footer-height: 100px;
-  --shadow: 0 2px 23px 0 rgba(0, 0, 0, 0.1), 0 2px 49px 0 rgba(0, 0, 0, 0.06);
+  --color-bg: #f4efe6;
+  --color-bg-soft: #fbf8f2;
+  --color-surface: #fffdf9;
+  --color-surface-strong: #16130f;
+  --color-surface-alt: #eee5d5;
+  --color-text: #201b16;
+  --color-text-soft: #64584d;
+  --color-text-on-dark: #f6f2e8;
+  --color-border: #dccfb8;
+  --color-border-strong: #8f7a56;
+  --color-accent: #b38b4d;
+  --color-accent-strong: #8f6b34;
+  --color-accent-soft: #e8d7b2;
+  --color-faith: #6d8f51;
+  --color-care: #b86c57;
+  --color-community: #4d7b8d;
+  --color-prayer: #7b6aa8;
+  --color-shadow: 0 18px 48px rgba(43, 31, 16, 0.12);
+  --radius-sm: 12px;
+  --radius-md: 18px;
+  --radius-lg: 28px;
+  --space-section: 80px;
+  --space-shell: min(1120px, calc(100% - 32px));
 }
 
 * {
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 400;
   font-style: normal;
 }
-/* Layout em GRID */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(180deg, var(--color-bg-soft) 0%, var(--color-bg) 100%);
+  color: var(--color-text);
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
 .App {
-  margin: 0px;
   display: flex;
   flex-direction: column;
-  grid-template-rows:
-    var(--header-height)
-    1fr
-    var(--footer-height);
-  grid-template-areas:
-    "header"
-    "content"
-    "footer";
   min-height: 100vh;
-  background-color: var(--bg-dark);
+  background-color: transparent;
   text-align: center;
 }
 
-header.header {
-  grid-area: header;
-}
-main.content {
-  grid-area: content;
+.App main {
+  flex: 1;
 }
 
-footer.footer {
-  grid-area: footer;
+.page-shell {
+  width: var(--space-shell);
+  margin: 0 auto;
+}
+
+.section-heading {
+  max-width: 760px;
+  margin: 0 auto 32px;
+}
+
+.section-heading p {
+  color: var(--color-text-soft);
+  line-height: 1.7;
+}
+
+.surface-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--color-shadow);
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: var(--color-accent-strong);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.8rem;
+  font-weight: 700;
 }

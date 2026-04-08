@@ -1,0 +1,49 @@
+.ministerios-page {
+  padding: 56px 0 var(--space-section);
+}
+
+.ministerios-hero,
+.ministerios-list,
+.ministerios-flow {
+  padding: 24px 0;
+}
+
+.ministerios-shell {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.ministerios-highlight-grid,
+.ministerios-flow-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.ministerios-highlight,
+.ministerios-step {
+  padding: 24px;
+  text-align: left;
+}
+
+.ministerios-highlight p,
+.ministerios-step p {
+  color: var(--color-text-soft);
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+.ministerios-step span {
+  display: inline-flex;
+  margin-bottom: 16px;
+  font-weight: 700;
+  color: var(--color-accent-strong);
+}
+
+@media (max-width: 900px) {
+  .ministerios-highlight-grid,
+  .ministerios-flow-grid {
+    grid-template-columns: 1fr;
+  }
+}

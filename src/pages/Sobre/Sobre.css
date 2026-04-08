@@ -1,0 +1,74 @@
+.sobre-page {
+  padding: 56px 0 var(--space-section);
+}
+
+.sobre-hero,
+.sobre-pastores,
+.sobre-history,
+.sobre-practices,
+.sobre-location {
+  padding: 24px 0;
+}
+
+.sobre-pillars,
+.practice-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.sobre-pillar,
+.practice-card {
+  padding: 24px;
+  text-align: left;
+}
+
+.sobre-pillar p,
+.practice-card p {
+  color: var(--color-text-soft);
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+.pastors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.sobre-history-shell .history-card {
+  padding: 32px;
+  text-align: left;
+}
+
+.history-card p {
+  color: var(--color-text-soft);
+  line-height: 1.9;
+}
+
+.map-container {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+}
+
+.map-container iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+@media (max-width: 900px) {
+  .sobre-pillars,
+  .practice-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sobre-history-shell .history-card {
+    padding: 24px;
+  }
+}

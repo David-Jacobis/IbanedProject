@@ -1,21 +1,23 @@
-import Home from "../components/home/Home";
-import Sobre from "../components/sobre/Sobre";
-import { Routes, Route } from "react-router-dom";
-import Celulas from "../components/celulas/Celulas";
-import Ministerios from "../components/ministerios/Ministerios";
-import Programacao from "../components/programacao/Programacao";
+import { Navigate, Route, Routes } from "react-router-dom";
+import {
+  CelulasPage,
+  HomePage,
+  MinisteriosPage,
+  ProgramacaoPage,
+  SobrePage,
+} from "../pages";
 
-const Rotas = () => {
+const AppRoutes = () => {
   return (
     <Routes>
-      <Route exact path="/" element={<Home />} />
-      <Route path="*" element={<Home />} />
-      <Route path="/Sobre" element={<Sobre />} />
-      <Route path="/Ministerios" element={<Ministerios />} />
-      <Route path="/Programacao" element={<Programacao />} />
-      <Route path="/Celulas" element={<Celulas/>} />
+      <Route path="/" element={<HomePage />} />
+      <Route path="/sobre" element={<SobrePage />} />
+      <Route path="/ministerios" element={<MinisteriosPage />} />
+      <Route path="/programacao" element={<ProgramacaoPage />} />
+      <Route path="/celulas" element={<CelulasPage />} />
+      <Route path="*" element={<Navigate replace to="/" />} />
     </Routes>
   );
 };
 
-export default Rotas;
+export default AppRoutes;

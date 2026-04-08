@@ -1,0 +1,347 @@
+.home-page {
+  background: transparent;
+}
+
+.home-hero {
+  padding: 72px 0 32px;
+}
+
+.home-hero-shell {
+  display: grid;
+  grid-template-columns: 1.3fr 0.9fr;
+  gap: 28px;
+  align-items: stretch;
+}
+
+.home-hero-copy {
+  padding: 52px;
+  border-radius: var(--radius-lg);
+  background:
+    linear-gradient(rgba(19, 16, 12, 0.48), rgba(19, 16, 12, 0.58)),
+    url("../../assets/images/2025\ \ ANO\ DE\ fazer.png") center/cover;
+  color: var(--color-text-on-dark);
+  text-align: left;
+  box-shadow: var(--color-shadow);
+}
+
+.home-hero-copy h1 {
+  margin: 0 0 18px;
+  font-size: clamp(2.3rem, 5vw, 4.4rem);
+  line-height: 1.05;
+}
+
+.home-hero-copy p {
+  max-width: 620px;
+  color: rgba(246, 242, 232, 0.92);
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+.home-hero-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+.hero-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 12px 20px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.hero-button-primary {
+  background: var(--color-accent);
+  color: #fffdf8;
+}
+
+.hero-button-secondary {
+  background: transparent;
+  border: 1px solid rgba(246, 242, 232, 0.55);
+  color: var(--color-text-on-dark);
+}
+
+.home-hero-panel {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  background: var(--color-surface);
+}
+
+.home-hero-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  text-align: left;
+  color: var(--color-text);
+}
+
+.home-hero-item svg {
+  margin-top: 4px;
+  color: var(--color-accent-strong);
+}
+
+.home-hero-item p {
+  margin: 6px 0 0;
+  color: var(--color-text-soft);
+  line-height: 1.6;
+}
+
+.home-highlights {
+  padding: 16px 0 32px;
+}
+
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.highlight-card {
+  padding: 24px;
+  text-align: left;
+}
+
+.highlight-card h3 {
+  margin-top: 0;
+  color: var(--color-text);
+}
+
+.highlight-card p {
+  margin-bottom: 0;
+  line-height: 1.7;
+  color: var(--color-text-soft);
+}
+
+.home-values-section,
+.home-path,
+.home-purpose {
+  padding: var(--space-section) 0;
+}
+
+.home-values-section {
+  background: var(--color-bg-soft);
+}
+
+.values-layout {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.values-row {
+  display: grid;
+  gap: 24px;
+}
+
+.values-row-primary {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.values-row-secondary {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: min(760px, 100%);
+  align-self: center;
+}
+
+.value-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.value-card {
+  min-height: 220px;
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+  overflow: hidden;
+}
+
+.value-card-content {
+  height: 100%;
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: var(--color-text);
+}
+
+.value-card-content h3,
+.value-card-content h4 {
+  margin: 0;
+}
+
+.value-card-content h3 {
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+}
+
+.value-card-content h4 {
+  margin-top: 10px;
+  font-size: 1.65rem;
+  font-weight: 700;
+}
+
+.value-card-icon {
+  margin-bottom: 14px;
+}
+
+.value-card-accent {
+  width: 100%;
+  height: 10px;
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+}
+
+.home-stats {
+  padding: 0 0 32px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.stat-card {
+  padding: 24px;
+  text-align: center;
+}
+
+.stat-card strong {
+  display: block;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  color: var(--color-accent-strong);
+}
+
+.stat-card p {
+  margin-bottom: 0;
+  color: var(--color-text-soft);
+  line-height: 1.6;
+}
+
+.path-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.path-card {
+  padding: 24px;
+  text-align: left;
+}
+
+.path-index {
+  display: inline-flex;
+  margin-bottom: 16px;
+  color: var(--color-accent-strong);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.path-card p {
+  color: var(--color-text-soft);
+  line-height: 1.7;
+}
+
+.home-cell-banner {
+  padding: 0 0 var(--space-section);
+}
+
+.cell-banner-shell {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 36px;
+  border-radius: var(--radius-lg);
+  background:
+    linear-gradient(rgba(31, 26, 20, 0.72), rgba(31, 26, 20, 0.72)),
+    url("../../assets/images/biblia.jpg") center/cover;
+  color: var(--color-text-on-dark);
+  box-shadow: var(--color-shadow);
+}
+
+.cell-banner-copy {
+  text-align: left;
+  max-width: 680px;
+}
+
+.cell-banner-copy p {
+  line-height: 1.8;
+  color: rgba(246, 242, 232, 0.9);
+}
+
+.purpose-card {
+  padding: 42px;
+  text-align: left;
+}
+
+.purpose-card h2 {
+  color: var(--color-text);
+}
+
+.purpose-card p {
+  color: var(--color-text-soft);
+  line-height: 1.9;
+}
+
+.purpose-quote {
+  color: var(--color-prayer);
+  margin: 12px 0;
+}
+
+.purpose-quote-end {
+  display: block;
+  margin-left: auto;
+}
+
+@media (max-width: 900px) {
+  .home-hero-shell,
+  .highlights-grid,
+  .stats-grid,
+  .path-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .values-row-primary,
+  .values-row-secondary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+  }
+
+  .cell-banner-shell {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .home-hero-copy,
+  .purpose-card,
+  .cell-banner-shell {
+    padding: 24px;
+  }
+
+  .values-row-primary,
+  .values-row-secondary {
+    grid-template-columns: 1fr;
+  }
+
+  .home-hero-actions {
+    flex-direction: column;
+  }
+
+  .hero-button {
+    width: 100%;
+  }
+}

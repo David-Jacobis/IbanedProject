@@ -1,0 +1,67 @@
+.celulas-page {
+  padding: 56px 0 var(--space-section);
+}
+
+.celulas-hero,
+.celulas-benefits,
+.celulas-meeting,
+.celulas-steps {
+  padding: 24px 0;
+}
+
+.celulas-hero-card {
+  padding: 40px;
+  text-align: center;
+  background: linear-gradient(135deg, var(--color-accent-soft), #f7efe1);
+}
+
+.celulas-hero-card h1 {
+  margin: 0 auto 12px;
+  max-width: 820px;
+  color: var(--color-text);
+  line-height: 1.25;
+}
+
+.celulas-hero-card p {
+  margin-bottom: 0;
+  color: var(--color-text-soft);
+  font-weight: 700;
+}
+
+.celulas-benefit-grid,
+.celulas-step-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.celulas-benefit-card,
+.celulas-step-card {
+  padding: 24px;
+  text-align: left;
+}
+
+.celulas-benefit-card p,
+.celulas-step-card p {
+  color: var(--color-text-soft);
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+.celulas-step-card span {
+  display: inline-flex;
+  margin-bottom: 16px;
+  font-weight: 700;
+  color: var(--color-accent-strong);
+}
+
+@media (max-width: 900px) {
+  .celulas-benefit-grid,
+  .celulas-step-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .celulas-hero-card {
+    padding: 28px;
+  }
+}
