@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/IbanedProject/static/css/main.d431adfc.css",
-    "main.js": "/IbanedProject/static/js/main.638847fa.js",
+    "main.css": "/IbanedProject/static/css/main.c3f1e687.css",
+    "main.js": "/IbanedProject/static/js/main.fc15da0d.js",
     "static/js/453.8b822688.chunk.js": "/IbanedProject/static/js/453.8b822688.chunk.js",
     "static/media/oração.png": "/IbanedProject/static/media/oração.446916a7d00aff66d4e4.png",
     "static/media/TE AGRADEÇO - KLEBER LUCAS.png": "/IbanedProject/static/media/TE AGRADEÇO - KLEBER LUCAS.4da5f638937b06612d9f.png",
@@ -18,12 +18,12 @@
     "static/media/PrMarcos.jpg": "/IbanedProject/static/media/PrMarcos.fe5d3ec08af584363084.jpg",
     "static/media/SowTeste.png": "/IbanedProject/static/media/SowTeste.cbf66f9fa9be58f5b371.png",
     "index.html": "/IbanedProject/index.html",
-    "main.d431adfc.css.map": "/IbanedProject/static/css/main.d431adfc.css.map",
-    "main.638847fa.js.map": "/IbanedProject/static/js/main.638847fa.js.map",
+    "main.c3f1e687.css.map": "/IbanedProject/static/css/main.c3f1e687.css.map",
+    "main.fc15da0d.js.map": "/IbanedProject/static/js/main.fc15da0d.js.map",
     "453.8b822688.chunk.js.map": "/IbanedProject/static/js/453.8b822688.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d431adfc.css",
-    "static/js/main.638847fa.js"
+    "static/css/main.c3f1e687.css",
+    "static/js/main.fc15da0d.js"
   ]
 }
