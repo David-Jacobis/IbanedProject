@@ -8,10 +8,12 @@ import {
   churchHistory,
   pastors,
 } from "../../data/siteContent";
+import { ScrollProgress } from "../../components/ui";
 
 function SobrePage() {
   return (
     <main className="sobre-page">
+      <ScrollProgress />
       <section className="sobre-hero">
         <div className="page-shell sobre-shell">
           <div className="section-heading">

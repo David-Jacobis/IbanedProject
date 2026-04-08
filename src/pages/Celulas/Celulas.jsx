@@ -2,10 +2,12 @@ import React from "react";
 import "./Celulas.css";
 import { MeetingCards } from "../../components/ui";
 import { cellBenefits, cellSteps } from "../../data/siteContent";
+import { ScrollProgress } from "../../components/ui";
 
 const CelulasPage = () => {
   return (
     <main className="celulas-page">
+      <ScrollProgress />
       <section className="celulas-hero">
         <div className="page-shell">
           <div className="celulas-hero-card surface-card">

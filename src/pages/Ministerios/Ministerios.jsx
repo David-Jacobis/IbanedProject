@@ -6,10 +6,12 @@ import {
   ministryHighlights,
   ministryItems,
 } from "../../data/siteContent";
+import { ScrollProgress } from "../../components/ui";
 
 function MinisteriosPage() {
   return (
     <main className="ministerios-page">
+      <ScrollProgress />
       <section className="ministerios-hero">
         <div className="page-shell ministerios-shell">
           <div className="section-heading">
