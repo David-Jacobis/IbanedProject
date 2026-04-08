@@ -29,7 +29,6 @@ import Semanas from "../assets/images/TE AGRADEÇO - KLEBER LUCAS.png";
 import Sow from "../assets/images/SowTeste.png";
 
 export const navigationLinks = deepFreeze([
-  { label: "Home", path: "/" },
   { label: "Sobre", path: "/sobre" },
   { label: "Ministérios", path: "/ministerios" },
   { label: "Programação", path: "/programacao" },
