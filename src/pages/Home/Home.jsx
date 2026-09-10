@@ -16,7 +16,13 @@ import {
   LuMessageCircle,
 } from "react-icons/lu";
 import { Link } from "react-router-dom";
-import { CountUp, Reveal, ScrollProgress, Stagger } from "../../components/ui";
+import {
+  CountUp,
+  GroupsSection,
+  Reveal,
+  ScrollProgress,
+  Stagger,
+} from "../../components/ui";
 import heroImage from "../../assets/images/hero-home.jpg";
 import {
   contactInfo,
@@ -275,6 +281,8 @@ const HomePage = () => {
             </Stagger>
           </div>
         </section>
+
+        <GroupsSection />
 
         <section className="home-events">
           <div className="page-shell">
