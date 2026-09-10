@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.css": "/IbanedProject/static/css/main.be459574.css",
-    "main.js": "/IbanedProject/static/js/main.5a48c247.js",
+    "main.css": "/IbanedProject/static/css/main.a4ebdfa4.css",
+    "main.js": "/IbanedProject/static/js/main.15a65119.js",
     "static/css/598.797cec0d.chunk.css": "/IbanedProject/static/css/598.797cec0d.chunk.css",
     "static/js/598.f1f706ab.chunk.js": "/IbanedProject/static/js/598.f1f706ab.chunk.js",
     "static/css/979.be5501ef.chunk.css": "/IbanedProject/static/css/979.be5501ef.chunk.css",
-    "static/js/979.c739bbab.chunk.js": "/IbanedProject/static/js/979.c739bbab.chunk.js",
+    "static/js/979.0d0a0b95.chunk.js": "/IbanedProject/static/js/979.0d0a0b95.chunk.js",
     "static/js/453.4f53980c.chunk.js": "/IbanedProject/static/js/453.4f53980c.chunk.js",
     "static/js/837.4de1ba55.chunk.js": "/IbanedProject/static/js/837.4de1ba55.chunk.js",
     "static/js/945.03a55727.chunk.js": "/IbanedProject/static/js/945.03a55727.chunk.js",
@@ -25,18 +25,18 @@
     "static/media/avalanche-1600.jpg": "/IbanedProject/static/media/avalanche-1600.cdf1cf7d814e77b341df.jpg",
     "static/media/SowTeste.png": "/IbanedProject/static/media/SowTeste.cbf66f9fa9be58f5b371.png",
     "index.html": "/IbanedProject/index.html",
-    "main.be459574.css.map": "/IbanedProject/static/css/main.be459574.css.map",
-    "main.5a48c247.js.map": "/IbanedProject/static/js/main.5a48c247.js.map",
+    "main.a4ebdfa4.css.map": "/IbanedProject/static/css/main.a4ebdfa4.css.map",
+    "main.15a65119.js.map": "/IbanedProject/static/js/main.15a65119.js.map",
     "598.797cec0d.chunk.css.map": "/IbanedProject/static/css/598.797cec0d.chunk.css.map",
     "598.f1f706ab.chunk.js.map": "/IbanedProject/static/js/598.f1f706ab.chunk.js.map",
     "979.be5501ef.chunk.css.map": "/IbanedProject/static/css/979.be5501ef.chunk.css.map",
-    "979.c739bbab.chunk.js.map": "/IbanedProject/static/js/979.c739bbab.chunk.js.map",
+    "979.0d0a0b95.chunk.js.map": "/IbanedProject/static/js/979.0d0a0b95.chunk.js.map",
     "453.4f53980c.chunk.js.map": "/IbanedProject/static/js/453.4f53980c.chunk.js.map",
     "837.4de1ba55.chunk.js.map": "/IbanedProject/static/js/837.4de1ba55.chunk.js.map",
     "945.03a55727.chunk.js.map": "/IbanedProject/static/js/945.03a55727.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.be459574.css",
-    "static/js/main.5a48c247.js"
+    "static/css/main.a4ebdfa4.css",
+    "static/js/main.15a65119.js"
   ]
 }
