@@ -29,6 +29,7 @@ import Semanas from "../assets/images/evento-semanas-1400.jpg";
 import Sow from "../assets/images/SowTeste.png";
 
 export const navigationLinks = deepFreeze([
+  { label: "Início", path: "/" },
   { label: "Sobre", path: "/sobre" },
   { label: "Ministérios", path: "/ministerios" },
   { label: "Programação", path: "/programacao" },
