@@ -267,31 +267,31 @@ export const scheduleGuides = deepFreeze([
 export const pastors = deepFreeze([
   {
     image: PastorLeal,
-    name: "Pastor Leal",
+    name: "Pastor Antonio Leal",
     description:
       "É o Pastor Emérito da IBANED. Casado com Luzia Leal, tem quatro filhos: Edom, Éber, Estêvão e Ester. Está na IBANED desde 1986.",
   },
   {
     image: PastorEber,
-    name: "Pastor Éber",
+    name: "Pastor Eber Leal",
     description:
       "Pastor presidente, casado com Adriana Leal. Foi ordenado ao ministério pastoral em 2011 e serve à IBANED em dedicação exclusiva.",
   },
   {
     image: PastorLuciano,
-    name: "Pastor Luciano",
+    name: "Pastor Marcos Aguiar ",
     description:
       "Casado com Mariele Neves, foi ordenado em 2012 e serve à IBANED em dedicação exclusiva, com foco em cuidado e ensino.",
   },
   {
     image: PastorMarcos,
-    name: "Pastor Marcos",
+    name: "Pastor Joaquim Coutinho",
     description:
       "Casado com Ana Paula, exerce um ministério bivocacionado e tem contribuído com fidelidade no pastoreio e discipulado da igreja.",
   },
   {
     image: PastorFabio,
-    name: "Pastor Fábio",
+    name: "Pastor Bruno França",
     description:
       "Casado com Débora Silva e pai de Catarina. Foi ordenado em 2018 e serve ao Senhor na IBANED em um ministério bivocacionado.",
   },
