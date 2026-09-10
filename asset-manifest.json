@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/IbanedProject/static/css/main.948e24d8.css",
-    "main.js": "/IbanedProject/static/js/main.8160fa48.js",
-    "static/js/453.8b822688.chunk.js": "/IbanedProject/static/js/453.8b822688.chunk.js",
+    "main.css": "/IbanedProject/static/css/main.80b8f5ff.css",
+    "main.js": "/IbanedProject/static/js/main.e6a78944.js",
+    "static/js/453.4f53980c.chunk.js": "/IbanedProject/static/js/453.4f53980c.chunk.js",
     "static/media/oração.png": "/IbanedProject/static/media/oração.446916a7d00aff66d4e4.png",
     "static/media/TE AGRADEÇO - KLEBER LUCAS.png": "/IbanedProject/static/media/TE AGRADEÇO - KLEBER LUCAS.4da5f638937b06612d9f.png",
     "static/media/2025  ANO DE fazer.png": "/IbanedProject/static/media/2025  ANO DE fazer.ac51fa92076693beddc6.png",
@@ -18,12 +18,12 @@
     "static/media/PrMarcos.jpg": "/IbanedProject/static/media/PrMarcos.fe5d3ec08af584363084.jpg",
     "static/media/SowTeste.png": "/IbanedProject/static/media/SowTeste.cbf66f9fa9be58f5b371.png",
     "index.html": "/IbanedProject/index.html",
-    "main.948e24d8.css.map": "/IbanedProject/static/css/main.948e24d8.css.map",
-    "main.8160fa48.js.map": "/IbanedProject/static/js/main.8160fa48.js.map",
-    "453.8b822688.chunk.js.map": "/IbanedProject/static/js/453.8b822688.chunk.js.map"
+    "main.80b8f5ff.css.map": "/IbanedProject/static/css/main.80b8f5ff.css.map",
+    "main.e6a78944.js.map": "/IbanedProject/static/js/main.e6a78944.js.map",
+    "453.4f53980c.chunk.js.map": "/IbanedProject/static/js/453.4f53980c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.948e24d8.css",
-    "static/js/main.8160fa48.js"
+    "static/css/main.80b8f5ff.css",
+    "static/js/main.e6a78944.js"
   ]
 }
