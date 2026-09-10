@@ -221,8 +221,8 @@ export const ministryFlow = deepFreeze([
 
 export const scheduleItems = deepFreeze([
   {
-    title: "Culto 30 Semanas",
-    day: "Toda quarta-feira, 20h",
+    title: "Valorizando Vidas",
+    day: "Toda segunda-feira, 19:30h",
     location: "Av. Raul Mourão Guimarães, 740, Palmeiras, Belo Horizonte",
     image: Semanas,
   },
@@ -233,13 +233,13 @@ export const scheduleItems = deepFreeze([
     image: Oracao,
   },
   {
-    title: "Culto SOW",
+    title: "SOW (JVs e ADLs)",
     day: "Todo sábado, 19h30",
     location: "Av. Raul Mourão Guimarães, 740, Palmeiras, Belo Horizonte",
     image: Sow,
   },
   {
-    title: "Cultos Dominicais",
+    title: "Celebração ",
     day: "Todo domingo, às 10h e 18h",
     location: "Av. Raul Mourão Guimarães, 740, Palmeiras, Belo Horizonte",
     image: CultoDomingos,
