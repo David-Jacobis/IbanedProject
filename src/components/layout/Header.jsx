@@ -2,8 +2,9 @@ import "./Header.css";
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { Link, NavLink } from "react-router-dom";
+import { LuMessageCircle } from "react-icons/lu";
 import logo from "../../assets/images/IbanedIcon.png";
-import { navigationLinks } from "../../data/siteContent";
+import { contactInfo, navigationLinks } from "../../data/siteContent";
 
 const menuVariants = {
   hidden: { opacity: 0, x: -100 },
@@ -22,6 +23,7 @@ const itemVariants = {
 };
 
 const MOBILE_BREAKPOINT = 768;
+const SCROLLED_OFFSET = 12;
 
 const isMobileViewport = () =>
   typeof window !== "undefined" && window.innerWidth <= MOBILE_BREAKPOINT;
@@ -29,6 +31,7 @@ const isMobileViewport = () =>
 const Header = () => {
   const [isMobile, setIsMobile] = useState(isMobileViewport);
   const [menuOpen, setMenuOpen] = useState(!isMobileViewport());
+  const [scrolled, setScrolled] = useState(false);
   const wasMobileRef = useRef(isMobileViewport());
 
   useEffect(() => {
@@ -45,6 +48,24 @@ const Header = () => {
 
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+    let ticking = false;
+    const update = () => {
+      setScrolled(window.scrollY > SCROLLED_OFFSET);
+      ticking = false;
+    };
+    const onScroll = () => {
+      if (!ticking) {
+        ticking = true;
+        window.requestAnimationFrame(update);
+      }
+    };
+
+    update();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   useEffect(() => {
@@ -71,14 +92,14 @@ const Header = () => {
   const showMenu = !isMobile || menuOpen;
 
   return (
-    <header className="header">
+    <header className={`header ${scrolled ? "header--scrolled" : ""}`}>
       <div className="header-content">
-        <Link to="/" aria-label="IBANED — página inicial">
+        <Link to="/" aria-label="IBANED — página inicial" className="header-logo">
           <motion.img
             src={logo}
             id="logo"
             alt="Logo da IBANED"
-            whileHover={{ scale: 0.92 }}
+            whileHover={{ scale: 0.94 }}
             transition={{ duration: 0.3 }}
           />
         </Link>
@@ -128,6 +149,20 @@ const Header = () => {
               )}
             </motion.div>
           ))}
+
+          <motion.div variants={itemVariants} className="menu-cta-wrap">
+            <a
+              className="menu-cta"
+              href={contactInfo.whatsapp}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={closeMenu}
+              tabIndex={showMenu ? 0 : -1}
+            >
+              <LuMessageCircle size={18} aria-hidden="true" focusable="false" />
+              Fale conosco
+            </a>
+          </motion.div>
         </motion.nav>
       </div>
     </header>

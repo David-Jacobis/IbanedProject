@@ -30,10 +30,23 @@
   --text-xl: clamp(1.55rem, 1.3rem + 1.2vw, 2.15rem);
   --text-2xl: clamp(1.9rem, 1.5rem + 2vw, 2.9rem);
   --text-3xl: clamp(2.3rem, 1.7rem + 3.1vw, 3.9rem);
+  /* Editorial display size for hero / section openers. */
+  --text-display: clamp(2.5rem, 1.5rem + 4.6vw, 5rem);
 
   --lh-tight: 1.2;
   --lh-snug: 1.45;
   --lh-normal: 1.7;
+  --lh-display: 1.04;
+  --tracking-display: -0.02em;
+
+  /* Shared easing + timing for entrance/hover motion. */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-fast: 0.18s;
+  --dur-mid: 0.32s;
+
+  /* Vertical rhythm — larger, airier sections for the premium feel. */
+  --space-flow: clamp(56px, 8vw, 140px);
 
   --focus-ring: 3px solid var(--color-accent-strong, #8f6b34);
   --tap-target: 44px;
@@ -115,6 +128,11 @@ p {
   min-width: 0;
 }
 
+/* Placeholder that holds space while a lazily-loaded block resolves. */
+.lazy-block {
+  min-height: 280px;
+}
+
 /* Screen-reader-only text: in the accessibility tree, invisible on screen. */
 .sr-only {
   position: absolute;
@@ -170,6 +188,121 @@ p {
 
 :where(button, [role="button"], a, label, summary) {
   -webkit-tap-highlight-color: transparent;
+}
+
+/* Lenis smooth scroll (see src/components/providers/SmoothScroll.jsx).
+   These rules only take effect while a Lenis instance is mounted. */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+/* Utility: media that fills its box at a fixed ratio without distortion. */
+.media-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/*
+ * Button system — one consistent pill across the site.
+ *   .btn            base
+ *   .btn--primary   solid accent (light or dark surfaces)
+ *   .btn--dark      solid dark (light surfaces)
+ *   .btn--ghost     translucent outline for photographic / dark backgrounds
+ *   .btn--lg        larger hit area for hero / primary CTAs
+ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55em;
+  min-height: var(--tap-target);
+  padding: 0.8em 1.5em;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font: inherit;
+  font-weight: 700;
+  font-size: var(--text-sm);
+  letter-spacing: 0.02em;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    transform var(--dur-fast) ease,
+    background-color var(--dur-fast) ease,
+    border-color var(--dur-fast) ease,
+    color var(--dur-fast) ease,
+    box-shadow var(--dur-fast) ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn--lg {
+  font-size: var(--text-base);
+  padding: 1em 1.85em;
+}
+
+.btn--primary {
+  background: var(--color-accent);
+  color: #fffdf8;
+}
+
+.btn--primary:hover {
+  background: var(--color-accent-strong);
+  box-shadow: 0 12px 28px rgba(37, 29, 16, 0.28);
+}
+
+.btn--dark {
+  background: var(--color-surface-strong);
+  color: var(--color-text-on-dark);
+}
+
+.btn--dark:hover {
+  background: #241f18;
+}
+
+.btn--ghost {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(246, 242, 232, 0.5);
+  color: var(--color-text-on-dark);
+  backdrop-filter: blur(4px);
+}
+
+.btn--ghost:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(246, 242, 232, 0.85);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn:hover,
+  .btn:active {
+    transform: none;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -14,18 +14,18 @@ import {
 } from "react-icons/lu";
 import { PiHandsPrayingFill } from "react-icons/pi";
 import { deepFreeze } from "../utils/deepFreeze";
-import Avalanche from "../assets/images/Avalanche.jpg";
-import Biblia from "../assets/images/biblia.jpg";
-import CultoDomingos from "../assets/images/2025  ANO DE fazer.png";
-import Intercessao from "../assets/images/Intercecao.jpg";
-import MatheusBiblia from "../assets/images/MatheusBiblia.jpg";
-import Oracao from "../assets/images/oração.png";
+import Avalanche from "../assets/images/avalanche-1600.jpg";
+import Biblia from "../assets/images/biblia-1600.jpg";
+import CultoDomingos from "../assets/images/evento-domingos-1400.jpg";
+import Intercessao from "../assets/images/intercecao-1600.jpg";
+import MatheusBiblia from "../assets/images/matheusbiblia-1600.jpg";
+import Oracao from "../assets/images/evento-oracao-1400.jpg";
 import PastorEber from "../assets/images/PrEber3.jpg";
 import PastorFabio from "../assets/images/PrFabio.jpg";
 import PastorLeal from "../assets/images/PrLeal.jpg";
 import PastorLuciano from "../assets/images/PrLu.jpg";
 import PastorMarcos from "../assets/images/PrMarcos.jpg";
-import Semanas from "../assets/images/TE AGRADEÇO - KLEBER LUCAS.png";
+import Semanas from "../assets/images/evento-semanas-1400.jpg";
 import Sow from "../assets/images/SowTeste.png";
 
 export const navigationLinks = deepFreeze([
@@ -44,6 +44,7 @@ export const contactInfo = deepFreeze({
   name: "IBANED",
   phone: "(31) 2526-4248",
   email: "ibaned@gmail.com",
+  whatsapp: "https://wa.me/553125264248",
   address: [
     "Av. Raul Mourão Guimarães, 740",
     "Palmeiras, Belo Horizonte - MG",
@@ -141,7 +142,7 @@ export const homeHighlights = deepFreeze([
 
 export const homeStats = deepFreeze([
   { value: "1989", label: "Igreja oficialmente registrada" },
-  { value: "5", label: "Frentes pastorais em cuidado ativo" },
+  { value: 5, count: true, label: "Frentes pastorais em cuidado ativo" },
   { value: "Semanal", label: "Ritmo constante de culto, oração e comunhão" },
 ]);
 
@@ -167,24 +168,28 @@ export const ministryItems = deepFreeze([
   {
     title: "Avalanche",
     image: Avalanche,
+    audience: "Jovens e adultos",
     text:
       "Um ministério voltado para acolher, discipular e fortalecer vidas por meio de comunhão, Palavra e serviço.",
   },
   {
     title: "Intercessão",
     image: Intercessao,
+    audience: "Toda a igreja",
     text:
       "Uma frente dedicada à oração constante pela igreja, famílias, cidade e por tudo o que Deus deseja fazer em nosso meio.",
   },
   {
     title: "Ensino",
     image: Biblia,
+    audience: "Todas as idades",
     text:
       "Espaço para aprofundamento bíblico, formação cristã e preparo de líderes comprometidos com a verdade das Escrituras.",
   },
   {
     title: "Ação Social",
     image: MatheusBiblia,
+    audience: "Voluntários e comunidade",
     text:
       "Servimos com compaixão e presença prática, alcançando pessoas com cuidado, apoio e testemunho do evangelho.",
   },

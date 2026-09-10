@@ -3,9 +3,12 @@
 }
 
 .ministerios-hero,
-.ministerios-list,
 .ministerios-flow {
   padding: clamp(16px, 3vw, 24px) 0;
+}
+
+.ministerios-list {
+  padding: clamp(28px, 5vw, 56px) 0;
 }
 
 .ministerios-shell {
@@ -39,4 +42,28 @@
   margin-bottom: 16px;
   font-weight: 700;
   color: var(--color-accent-strong);
+}
+
+/* Asymmetric layout: one full-width featured card, then the rest in a
+   .fluid-grid (equal columns, centred partial last row). */
+.ministry-list-shell {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(20px, 3vw, 32px);
+}
+
+.ministry-grid {
+  --fg-min: 300px;
+  --fg-max: 460px;
+  --fg-gap: clamp(20px, 3vw, 32px);
+}
+
+.ministry-grid__item {
+  display: flex;
+  min-width: 0;
+}
+
+.ministry-grid__item > .ministry-card {
+  flex: 1;
+  width: 100%;
 }

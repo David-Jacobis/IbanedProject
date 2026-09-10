@@ -1,17 +1,23 @@
 import "./Home.css";
-import React from "react";
-import { motion } from "framer-motion";
+import React, { Suspense } from "react";
 import {
-  faCalendarDays,
-  faLocationDot,
-  faQuoteLeft,
-  faQuoteRight,
-  faUsers,
-} from "@fortawesome/free-solid-svg-icons";
-import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+  motion,
+  useReducedMotion,
+  useScroll,
+  useTransform,
+} from "framer-motion";
+import { faQuoteLeft, faQuoteRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  LuCalendarDays,
+  LuClock,
+  LuHeartHandshake,
+  LuMapPin,
+  LuMessageCircle,
+} from "react-icons/lu";
 import { Link } from "react-router-dom";
-import { ScrollProgress } from "../../components/ui";
+import { CountUp, Reveal, ScrollProgress, Stagger } from "../../components/ui";
+import heroImage from "../../assets/images/hero-home.jpg";
 import {
   contactInfo,
   featuredCellGroup,
@@ -19,89 +25,161 @@ import {
   homeJourney,
   homeStats,
   homeValues,
+  scheduleItems,
   servicePurpose,
 } from "../../data/siteContent";
 
+/* Below-the-fold and dependency-heavy — split out of the initial bundle. */
+const EventsCarousel = React.lazy(() =>
+  import("../../components/ui/EventsCarousel/EventsCarousel")
+);
+const ContactForm = React.lazy(() =>
+  import("../../components/ui/ContactForm/ContactForm")
+);
+
+const EASE = [0.16, 1, 0.3, 1];
+
 const HomePage = () => {
+  const reduceMotion = useReducedMotion();
   const firstRowValues = homeValues.slice(0, 3);
   const secondRowValues = homeValues.slice(3);
+
+  const { scrollY } = useScroll();
+  const parallax = useTransform(scrollY, [0, 700], [0, 90]);
+  const imageY = reduceMotion ? 0 : parallax;
+
+  const heroContainer = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: reduceMotion ? 0 : 0.1,
+        delayChildren: reduceMotion ? 0 : 0.12,
+      },
+    },
+  };
+  const heroItem = {
+    hidden: { opacity: 0, y: reduceMotion ? 0 : 22 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: reduceMotion ? 0 : 0.65, ease: EASE },
+    },
+  };
 
   return (
     <React.Fragment>
       <ScrollProgress />
       <main className="home-page">
-        <section className="home-hero">
-          <div className="page-shell home-hero-shell">
-            <div className="home-hero-copy">
-              <span className="eyebrow">Igreja Batista Estrela Dalva</span>
-              <h1>Um lugar para conhecer Jesus, criar raízes e servir em comunidade.</h1>
-              <p>
+        <section className="hero">
+          <div className="hero-media" aria-hidden="true">
+            <motion.img
+              src={heroImage}
+              alt=""
+              className="hero-image"
+              style={{ y: imageY }}
+              fetchpriority="high"
+              decoding="async"
+            />
+            <div className="hero-scrim" />
+          </div>
+
+          <div className="page-shell hero-inner">
+            <motion.div
+              className="hero-content"
+              variants={heroContainer}
+              initial="hidden"
+              animate="visible"
+            >
+              <motion.span className="hero-eyebrow" variants={heroItem}>
+                Igreja Batista Estrela Dalva
+              </motion.span>
+              <motion.h1 className="hero-title" variants={heroItem}>
+                Um lugar para conhecer Jesus, criar raízes e servir em
+                comunidade.
+              </motion.h1>
+              <motion.p className="hero-lede" variants={heroItem}>
                 Queremos receber você com clareza, cuidado e um ambiente que
                 facilite conexão, pertencimento e crescimento espiritual.
-              </p>
-              <div className="home-hero-actions">
-                <motion.a
-                  className="hero-button hero-button-primary"
-                  whileHover={{ scale: 1.03 }}
-                  href="https://wa.me/553125264248"
+              </motion.p>
+              <motion.div className="hero-actions" variants={heroItem}>
+                <a
+                  className="btn btn--primary btn--lg"
+                  href={contactInfo.whatsapp}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <FontAwesomeIcon icon={faWhatsapp} />
+                  <LuMessageCircle size={20} aria-hidden="true" focusable="false" />
                   Fale conosco
-                </motion.a>
-                <Link className="hero-button hero-button-secondary" to="/programacao">
-                  <FontAwesomeIcon icon={faCalendarDays} />
+                </a>
+                <Link className="btn btn--ghost btn--lg" to="/programacao">
+                  <LuCalendarDays size={20} aria-hidden="true" focusable="false" />
                   Ver programação
                 </Link>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
+          </div>
 
-            <div className="home-hero-panel surface-card">
-              <div className="home-hero-item">
-                <FontAwesomeIcon icon={faLocationDot} />
+          <div className="page-shell hero-facts-wrap">
+            <Reveal className="hero-facts" y={18} delay={0.1}>
+              <div className="hero-fact">
+                <LuMapPin aria-hidden="true" focusable="false" />
                 <div>
-                  <strong>Estamos em Belo Horizonte</strong>
-                  <p>{contactInfo.address[0]}</p>
+                  <strong>Belo Horizonte</strong>
+                  <span>{contactInfo.address[0]}</span>
                 </div>
               </div>
-              <div className="home-hero-item">
-                <FontAwesomeIcon icon={faUsers} />
+              <div className="hero-fact">
+                <LuClock aria-hidden="true" focusable="false" />
+                <div>
+                  <strong>Cultos aos domingos</strong>
+                  <span>10h e 18h</span>
+                </div>
+              </div>
+              <div className="hero-fact">
+                <LuHeartHandshake aria-hidden="true" focusable="false" />
                 <div>
                   <strong>Ambiente acolhedor</strong>
-                  <p>Comunhão, discipulado, oração e espaço para toda a família.</p>
+                  <span>Espaço para toda a família</span>
                 </div>
               </div>
-            </div>
+            </Reveal>
           </div>
         </section>
 
         <section className="home-highlights">
-          <div className="page-shell highlights-grid fluid-grid">
+          <Stagger className="page-shell highlights-grid fluid-grid">
             {homeHighlights.map((item) => (
-              <article key={item.title} className="highlight-card surface-card">
+              <Stagger.Item
+                as="article"
+                key={item.title}
+                className="highlight-card surface-card"
+              >
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>
-              </article>
+              </Stagger.Item>
             ))}
-          </div>
+          </Stagger>
         </section>
 
         <section className="home-values-section">
           <div className="page-shell">
-            <div className="section-heading">
+            <Reveal className="section-heading">
               <span className="eyebrow">Quem somos</span>
               <h2>Uma igreja com convicções bíblicas e uma missão prática.</h2>
               <p>
                 Nossa identidade não está apenas no que acreditamos, mas em como
                 vivemos isso juntos ao longo da semana.
               </p>
-            </div>
+            </Reveal>
 
             <div className="values-layout">
-              <div className="values-row values-row-primary">
+              <Stagger className="values-row values-row-primary">
                 {firstRowValues.map((value) => (
-                  <article key={value.title} className="value-item">
+                  <Stagger.Item
+                    as="article"
+                    key={value.title}
+                    className="value-item"
+                  >
                     <div
                       className="value-card"
                       style={{ backgroundColor: value.cardColor }}
@@ -121,13 +199,17 @@ const HomePage = () => {
                       className="value-card-accent"
                       style={{ backgroundColor: value.accentColor }}
                     />
-                  </article>
+                  </Stagger.Item>
                 ))}
-              </div>
+              </Stagger>
 
-              <div className="values-row values-row-secondary">
+              <Stagger className="values-row values-row-secondary">
                 {secondRowValues.map((value) => (
-                  <article key={value.title} className="value-item">
+                  <Stagger.Item
+                    as="article"
+                    key={value.title}
+                    className="value-item"
+                  >
                     <div
                       className="value-card"
                       style={{ backgroundColor: value.cardColor }}
@@ -147,61 +229,86 @@ const HomePage = () => {
                       className="value-card-accent"
                       style={{ backgroundColor: value.accentColor }}
                     />
-                  </article>
+                  </Stagger.Item>
                 ))}
-              </div>
+              </Stagger>
             </div>
           </div>
         </section>
 
         <section className="home-stats">
-          <div className="page-shell stats-grid">
+          <Stagger className="page-shell stats-grid">
             {homeStats.map((item) => (
-              <article key={item.label} className="stat-card surface-card">
-                <strong>{item.value}</strong>
+              <Stagger.Item
+                as="article"
+                key={item.label}
+                className="stat-card surface-card"
+              >
+                <strong>
+                  {item.count ? <CountUp to={item.value} /> : item.value}
+                </strong>
                 <p>{item.label}</p>
-              </article>
+              </Stagger.Item>
             ))}
-          </div>
+          </Stagger>
         </section>
 
         <section className="home-path">
           <div className="page-shell path-shell">
-            <div className="section-heading">
+            <Reveal className="section-heading">
               <span className="eyebrow">Como começar</span>
               <h2>Queremos tornar sua chegada simples e sua jornada consistente.</h2>
-            </div>
+            </Reveal>
 
-            <div className="path-grid fluid-grid">
+            <Stagger className="path-grid fluid-grid">
               {homeJourney.map((item, index) => (
-                <article key={item.title} className="path-card surface-card">
+                <Stagger.Item
+                  as="article"
+                  key={item.title}
+                  className="path-card surface-card"
+                >
                   <span className="path-index">0{index + 1}</span>
                   <h3>{item.title}</h3>
                   <p>{item.description}</p>
-                </article>
+                </Stagger.Item>
               ))}
-            </div>
+            </Stagger>
+          </div>
+        </section>
+
+        <section className="home-events">
+          <div className="page-shell">
+            <Reveal className="section-heading section-heading--wide">
+              <span className="eyebrow">Encontros da semana</span>
+              <h2>Momentos para adorar, ouvir a Palavra e caminhar junto.</h2>
+              <p>
+                Uma agenda com ritmo e acolhimento — venha do jeito que estiver.
+              </p>
+            </Reveal>
+            <Reveal>
+              <Suspense fallback={<div className="lazy-block" aria-hidden="true" />}>
+                <EventsCarousel items={scheduleItems} label="Encontros da semana" />
+              </Suspense>
+            </Reveal>
           </div>
         </section>
 
         <section className="home-cell-banner">
-          <div className="page-shell cell-banner-shell">
+          <Reveal className="page-shell cell-banner-shell">
             <div className="cell-banner-copy">
               <span className="eyebrow">Vida em célula</span>
               <h2>{featuredCellGroup.title}</h2>
               <p>{featuredCellGroup.description}</p>
             </div>
-            <motion.div whileHover={{ scale: 1.03 }}>
-              <Link className="hero-button hero-button-secondary" to="/celulas">
-                Saiba mais
-              </Link>
-            </motion.div>
-          </div>
+            <Link className="btn btn--ghost btn--lg" to="/celulas">
+              Saiba mais
+            </Link>
+          </Reveal>
         </section>
 
         <section className="home-purpose">
           <div className="page-shell">
-            <div className="purpose-card surface-card">
+            <Reveal className="purpose-card surface-card">
               <h2>{servicePurpose.title.toUpperCase()}</h2>
               <FontAwesomeIcon icon={faQuoteLeft} size="2x" className="purpose-quote" />
               <p>{servicePurpose.text}</p>
@@ -210,7 +317,39 @@ const HomePage = () => {
                 size="2x"
                 className="purpose-quote purpose-quote-end"
               />
-            </div>
+            </Reveal>
+          </div>
+        </section>
+
+        <section className="home-contact">
+          <div className="page-shell home-contact-grid">
+            <Reveal className="home-contact-copy">
+              <span className="eyebrow">Fale com a gente</span>
+              <h2>Tem uma dúvida, um pedido de oração ou quer nos visitar?</h2>
+              <p>
+                Escreva pra gente. Uma pessoa da equipe vai responder com
+                atenção e sem formalidade.
+              </p>
+              <ul className="home-contact-list">
+                <li>
+                  <LuMapPin aria-hidden="true" focusable="false" />
+                  <span>
+                    {contactInfo.address[0]} — {contactInfo.address[1]}
+                  </span>
+                </li>
+                <li>
+                  <LuMessageCircle aria-hidden="true" focusable="false" />
+                  <a href={contactInfo.whatsapp} target="_blank" rel="noopener noreferrer">
+                    WhatsApp {contactInfo.phone}
+                  </a>
+                </li>
+              </ul>
+            </Reveal>
+            <Reveal className="home-contact-form surface-card" delay={0.08}>
+              <Suspense fallback={<div className="lazy-block" aria-hidden="true" />}>
+                <ContactForm />
+              </Suspense>
+            </Reveal>
           </div>
         </section>
       </main>

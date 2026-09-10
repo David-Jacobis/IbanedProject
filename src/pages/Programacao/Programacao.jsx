@@ -1,8 +1,11 @@
 import React from "react";
 import "./Programacao.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faClock, faLocationDot } from "@fortawesome/free-solid-svg-icons";
-import { ScrollProgress } from "../../components/ui";
+import {
+  EventCard,
+  Reveal,
+  ScrollProgress,
+  Stagger,
+} from "../../components/ui";
 import { scheduleGuides, scheduleItems } from "../../data/siteContent";
 
 const ProgramacaoPage = () => {
@@ -12,50 +15,50 @@ const ProgramacaoPage = () => {
       <main className="programacao-page">
         <section className="programacao-hero">
           <div className="page-shell programacao-shell">
-            <div className="section-heading">
+            <Reveal className="section-heading">
               <span className="eyebrow">Programação</span>
               <h1>Encontros pensados para adoração, formação bíblica e comunhão.</h1>
               <p>
                 Nossa agenda semanal busca ritmo, clareza e acolhimento para que
                 novos visitantes e membros encontrem seu lugar com facilidade.
               </p>
-            </div>
+            </Reveal>
 
-            <div className="programacao-guide-grid fluid-grid">
+            <Stagger className="programacao-guide-grid fluid-grid">
               {scheduleGuides.map((item) => (
-                <article key={item.title} className="programacao-guide surface-card">
+                <Stagger.Item
+                  as="article"
+                  key={item.title}
+                  className="programacao-guide surface-card"
+                >
                   <h3>{item.title}</h3>
                   <p>{item.description}</p>
-                </article>
+                </Stagger.Item>
               ))}
-            </div>
+            </Stagger>
           </div>
         </section>
 
         <section className="programacao-list">
-          <div className="page-shell programacao-shell">
-            {scheduleItems.map((item) => (
-              <article key={item.title} className="programacao-card surface-card">
-                <div className="programacao-card-text">
-                  <h3>{item.title.toUpperCase()}</h3>
-                  <p>
-                    <FontAwesomeIcon icon={faClock} /> {item.day}
-                  </p>
-                  <p>
-                    <FontAwesomeIcon icon={faLocationDot} /> {item.location}
-                  </p>
-                </div>
+          <div className="page-shell">
+            <Reveal className="section-heading">
+              <span className="eyebrow">Nossos encontros</span>
+              <h2>Toda semana, presencialmente e também online.</h2>
+            </Reveal>
 
-                <div className="programacao-card-image">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    loading="lazy"
-                    decoding="async"
+            <Stagger className="programacao-events">
+              {scheduleItems.map((item) => (
+                <Stagger.Item key={item.title} className="programacao-events__item">
+                  <EventCard
+                    title={item.title}
+                    day={item.day}
+                    location={item.location}
+                    image={item.image}
+                    ctaTo={null}
                   />
-                </div>
-              </article>
-            ))}
+                </Stagger.Item>
+              ))}
+            </Stagger>
           </div>
         </section>
       </main>

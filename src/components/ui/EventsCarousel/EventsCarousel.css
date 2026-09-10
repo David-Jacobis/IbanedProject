@@ -1,0 +1,100 @@
+.events-carousel {
+  --event-card-basis: 85%;
+}
+
+.events-carousel__viewport {
+  overflow: hidden;
+  /* let focus rings on cards/links breathe without being clipped */
+  padding: 4px;
+  margin: -4px;
+}
+
+.events-carousel__container {
+  display: flex;
+  gap: clamp(16px, 2.5vw, 24px);
+  touch-action: pan-y;
+}
+
+.events-carousel__slide {
+  flex: 0 0 var(--event-card-basis);
+  min-width: 0;
+  display: flex;
+}
+
+.events-carousel__slide > .event-card {
+  width: 100%;
+}
+
+.events-carousel__controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: clamp(18px, 3vw, 28px);
+}
+
+.events-carousel__dots {
+  display: flex;
+  gap: 8px;
+}
+
+.events-carousel__dot {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: var(--color-border-strong);
+  opacity: 0.4;
+  cursor: pointer;
+  transition: opacity var(--dur-fast) ease, width var(--dur-fast) ease;
+}
+
+.events-carousel__dot.is-active {
+  opacity: 1;
+  width: 22px;
+  background: var(--color-accent-strong);
+}
+
+.events-carousel__arrows {
+  display: flex;
+  gap: 10px;
+}
+
+.events-carousel__arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--tap-target);
+  height: var(--tap-target);
+  border-radius: 999px;
+  border: 1px solid var(--color-border-strong);
+  background: var(--color-surface);
+  color: var(--color-text);
+  cursor: pointer;
+  transition: background-color var(--dur-fast) ease, color var(--dur-fast) ease,
+    border-color var(--dur-fast) ease, opacity var(--dur-fast) ease;
+}
+
+.events-carousel__arrow:hover:not(:disabled) {
+  background: var(--color-surface-strong);
+  border-color: var(--color-surface-strong);
+  color: var(--color-text-on-dark);
+}
+
+.events-carousel__arrow:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+@media (min-width: 640px) {
+  .events-carousel {
+    --event-card-basis: 50%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .events-carousel {
+    --event-card-basis: 34%;
+  }
+}

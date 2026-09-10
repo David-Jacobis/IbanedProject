@@ -1,0 +1,103 @@
+.ministry-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--color-shadow);
+  transition: transform var(--dur-mid) var(--ease-out-soft),
+    box-shadow var(--dur-mid) var(--ease-out-soft);
+}
+
+.ministry-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 26px 60px rgba(43, 31, 16, 0.18);
+}
+
+.ministry-card__media {
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+}
+
+.ministry-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s var(--ease-out-soft);
+}
+
+.ministry-card:hover .ministry-card__media img {
+  transform: scale(1.05);
+}
+
+.ministry-card__body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding: clamp(22px, 3vw, 32px);
+  text-align: left;
+}
+
+.ministry-card__audience {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: var(--color-accent-soft);
+  color: var(--color-accent-strong);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.ministry-card__title {
+  margin: 4px 0 0;
+  color: var(--color-text);
+  font-size: var(--text-xl);
+}
+
+.ministry-card__text {
+  margin: 0;
+  color: var(--color-text-soft);
+  line-height: 1.7;
+}
+
+.ministry-card__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+  color: var(--color-accent-strong);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.ministry-card__cta svg {
+  transition: transform var(--dur-fast) var(--ease-out-soft);
+}
+
+.ministry-card__cta:hover svg,
+.ministry-card:hover .ministry-card__cta svg {
+  transform: translateX(4px);
+}
+
+/* Featured: image and copy side by side on wider viewports. */
+@media (min-width: 768px) {
+  .ministry-card--featured {
+    flex-direction: row;
+  }
+
+  .ministry-card--featured .ministry-card__media {
+    flex: 1 1 52%;
+    aspect-ratio: auto;
+  }
+
+  .ministry-card--featured .ministry-card__body {
+    flex: 1 1 48%;
+    justify-content: center;
+    padding: clamp(28px, 4vw, 48px);
+  }
+}
