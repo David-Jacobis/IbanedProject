@@ -26,7 +26,7 @@ function SobrePage() {
             </p>
           </div>
 
-          <div className="sobre-pillars">
+          <div className="sobre-pillars fluid-grid">
             {aboutPillars.map((pillar) => (
               <article key={pillar.title} className="sobre-pillar surface-card">
                 <h3>{pillar.title}</h3>
@@ -44,7 +44,7 @@ function SobrePage() {
             <h2>Pastores que servem com presença, ensino e cuidado.</h2>
           </div>
 
-          <div className="pastors-grid">
+          <div className="pastors-grid fluid-grid">
             {pastors.map((pastor) => (
               <AboutCard
                 key={pastor.name}

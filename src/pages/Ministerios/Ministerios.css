@@ -5,25 +5,25 @@
 .ministerios-hero,
 .ministerios-list,
 .ministerios-flow {
-  padding: 24px 0;
+  padding: clamp(16px, 3vw, 24px) 0;
 }
 
 .ministerios-shell {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: clamp(18px, 3vw, 24px);
 }
 
+/* .fluid-grid: 3 across, reflowing to 2 + 1 (centred) then 1. */
 .ministerios-highlight-grid,
 .ministerios-flow-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 20px;
+  --fg-min: 260px;
+  --fg-max: 420px;
 }
 
 .ministerios-highlight,
 .ministerios-step {
-  padding: 24px;
+  padding: clamp(20px, 3vw, 24px);
   text-align: left;
 }
 
@@ -39,11 +39,4 @@
   margin-bottom: 16px;
   font-weight: 700;
   color: var(--color-accent-strong);
-}
-
-@media (max-width: 900px) {
-  .ministerios-highlight-grid,
-  .ministerios-flow-grid {
-    grid-template-columns: 1fr;
-  }
 }

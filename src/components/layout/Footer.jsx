@@ -57,21 +57,24 @@ const Footer = () => {
 
         <section className="footer-column">
           <h4>Conecte-se</h4>
-          <div className="social-row">
+          <ul className="social-row">
             {socialLinks.map((link) => (
-              <a
-                key={link.id}
-                href={link.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`social-link ${link.id}`}
-                aria-label={link.label}
-              >
-                <FontAwesomeIcon icon={iconById[link.id]} size="lg" />
-                <span>{link.label}</span>
-              </a>
+              <li key={link.id}>
+                <a
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-link"
+                  style={{ "--brand": link.brand }}
+                  aria-label={`${link.label} da IBANED (abre em nova aba)`}
+                  title={link.label}
+                >
+                  <FontAwesomeIcon icon={iconById[link.id]} aria-hidden="true" />
+                  <span className="sr-only">{link.label}</span>
+                </a>
+              </li>
             ))}
-          </div>
+          </ul>
         </section>
 
         <section className="footer-column">

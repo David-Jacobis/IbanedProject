@@ -20,19 +20,12 @@
   --radius-sm: 12px;
   --radius-md: 18px;
   --radius-lg: 28px;
-  --space-section: 80px;
-  --space-shell: min(1120px, calc(100% - 32px));
-}
-
-* {
-  box-sizing: border-box;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-html {
-  scroll-behavior: smooth;
+  /* Vertical rhythm and shell width scale with the viewport so large
+     monitors breathe instead of showing the laptop layout with wide gutters.
+     Box-sizing, smooth scroll, base typography and the overflow guard now
+     live in src/styles/foundation.css. */
+  --space-section: clamp(48px, 7vw, 112px);
+  --space-shell: min(1280px, calc(100% - clamp(32px, 6vw, 96px)));
 }
 
 body {
@@ -43,10 +36,6 @@ body {
 
 a {
   color: inherit;
-}
-
-img {
-  max-width: 100%;
 }
 
 .App {
@@ -68,12 +57,16 @@ img {
 
 .section-heading {
   max-width: 760px;
-  margin: 0 auto 32px;
+  margin: 0 auto clamp(20px, 3vw, 36px);
 }
 
 .section-heading p {
   color: var(--color-text-soft);
   line-height: 1.7;
+}
+
+.section-heading > :last-child {
+  margin-bottom: 0;
 }
 
 .surface-card {

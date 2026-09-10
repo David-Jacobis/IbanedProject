@@ -24,8 +24,8 @@
 
 .home-hero-copy h1 {
   margin: 0 0 18px;
-  font-size: clamp(2.3rem, 5vw, 4.4rem);
-  line-height: 1.05;
+  font-size: clamp(2.05rem, 1.4rem + 3vw, 4rem);
+  line-height: 1.12;
 }
 
 .home-hero-copy p {
@@ -98,10 +98,10 @@
   padding: 16px 0 32px;
 }
 
+/* .fluid-grid: 3 across on desktop, reflowing to 2 + 1 (centred) then 1. */
 .highlights-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 20px;
+  --fg-min: 260px;
+  --fg-max: 420px;
 }
 
 .highlight-card {
@@ -228,9 +228,8 @@
 }
 
 .path-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 20px;
+  --fg-min: 260px;
+  --fg-max: 420px;
 }
 
 .path-card {
@@ -303,12 +302,13 @@
   margin-left: auto;
 }
 
-@media (max-width: 900px) {
-  .home-hero-shell,
-  .highlights-grid,
-  .stats-grid,
-  .path-grid {
+@media (max-width: 1024px) {
+  .home-hero-shell {
     grid-template-columns: 1fr;
+  }
+
+  .home-hero-copy {
+    padding: clamp(28px, 5vw, 44px);
   }
 
   .values-row-primary,
@@ -320,16 +320,22 @@
   .cell-banner-shell {
     flex-direction: column;
     align-items: flex-start;
+    text-align: left;
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 600px) {
+  .home-hero {
+    padding: 40px 0 24px;
+  }
+
   .home-hero-copy,
   .purpose-card,
   .cell-banner-shell {
     padding: 24px;
   }
 
+  .stats-grid,
   .values-row-primary,
   .values-row-secondary {
     grid-template-columns: 1fr;

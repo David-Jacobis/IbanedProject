@@ -1,15 +1,15 @@
 .footer {
   background: var(--color-surface-strong);
   color: var(--color-text-on-dark);
-  padding: 48px 0;
+  padding: clamp(32px, 5vw, 48px) 0;
 }
 
 .footer-shell {
-  width: min(1120px, calc(100% - 32px));
+  width: var(--space-shell);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 28px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  gap: clamp(20px, 3vw, 28px);
   text-align: left;
 }
 
@@ -25,84 +25,73 @@
   align-items: flex-start;
 }
 
-.footer-column p,
-.footer-column a {
+.footer-column p {
   margin: 0 0 12px;
   color: rgba(246, 242, 232, 0.82);
-  text-decoration: none;
-  display: block;
 }
 
-.footer-column a:hover {
+.footer-column > a:not(.footer-cta) {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  margin: 0 0 2px;
+  color: rgba(246, 242, 232, 0.82);
+  text-decoration: none;
+}
+
+.footer-column a:not(.social-link):hover,
+.footer-column a:not(.social-link):focus-visible {
   color: var(--color-accent-soft);
 }
 
+/* Social links: compact circular icon buttons. Icon-only on screen — the
+   "Conecte-se" heading names the group and each link carries an accessible
+   label — with the brand colour revealed on hover/focus. */
 .social-row {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, max-content));
-  gap: 12px 20px;
-  justify-content: flex-start;
-  align-items: start;
-  width: auto;
+  list-style: none;
+  margin: 4px 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 .social-link {
-  margin: 0;
-  padding: 10px 14px;
   display: inline-flex;
   align-items: center;
-  justify-content: flex-start;
-  gap: 10px;
-  flex: 0 0 auto;
-  white-space: nowrap;
-  line-height: 1;
-  border: 1px solid rgba(246, 242, 232, 0.12);
+  justify-content: center;
+  width: var(--tap-target, 44px);
+  height: var(--tap-target, 44px);
   border-radius: 999px;
-  background: transparent;
-  color: rgba(246, 242, 232, 0.92);
-  font-weight: 600;
-  letter-spacing: 0.01em;
+  border: 1px solid rgba(246, 242, 232, 0.16);
+  background: rgba(246, 242, 232, 0.04);
+  color: rgba(246, 242, 232, 0.78);
+  font-size: 1.05rem;
+  text-decoration: none;
   transition:
+    color 0.2s ease,
     border-color 0.2s ease,
     background-color 0.2s ease,
-    color 0.2s ease,
-    transform 0.2s ease;
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .social-link svg {
-  width: 18px;
-  height: 18px;
-  display: block;
-  flex-shrink: 0;
+  width: 1em;
+  height: 1em;
 }
 
-.social-link span {
-  display: inline-block;
-  color: inherit;
-  text-decoration: none;
+.social-link:hover,
+.social-link:focus-visible {
+  color: var(--brand, var(--color-accent-soft));
+  border-color: var(--brand, var(--color-accent));
+  background: rgba(246, 242, 232, 0.09);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.3);
 }
 
-.social-link:hover {
-  border-color: rgba(232, 215, 178, 0.45);
-  background: rgba(255, 255, 255, 0.04);
-  color: var(--color-accent-soft);
-  transform: translateX(2px);
-}
-
-.social-link.whatsapp svg {
-  color: #4dd681;
-}
-
-.social-link.facebook svg {
-  color: #7fa4ff;
-}
-
-.social-link.instagram svg {
-  color: #ff89bc;
-}
-
-.social-link.youtube svg {
-  color: #ff6b6b;
+.social-link:active {
+  transform: translateY(0);
 }
 
 .footer-cta {
@@ -110,37 +99,16 @@
   align-items: center;
   justify-content: center;
   width: fit-content;
+  min-height: var(--tap-target, 44px);
   padding: 12px 18px;
   border: 1px solid var(--color-accent);
   border-radius: 999px;
   color: var(--color-text-on-dark);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
-@media (max-width: 768px) {
-  .footer {
-    padding: 36px 0;
-  }
-
-  .footer-shell {
-    gap: 24px;
-  }
-
-  .social-row {
-    grid-template-columns: repeat(2, minmax(0, max-content));
-    gap: 12px;
-  }
-
-  .social-link {
-    padding: 9px 12px;
-  }
-}
-
-@media (max-width: 480px) {
-  .social-row {
-    grid-template-columns: 1fr;
-  }
-
-  .social-link {
-    width: 100%;
-  }
+.footer-cta:hover,
+.footer-cta:focus-visible {
+  background: rgba(179, 139, 77, 0.16);
+  border-color: var(--color-accent-soft);
 }

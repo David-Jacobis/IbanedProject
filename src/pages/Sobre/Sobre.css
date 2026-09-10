@@ -7,23 +7,30 @@
 .sobre-history,
 .sobre-practices,
 .sobre-location {
-  padding: 24px 0;
+  padding: clamp(16px, 3vw, 24px) 0;
 }
 
-.sobre-pillars{
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 20px;
+/* .fluid-grid handles the responsive column count and centres a partial
+   last row; only the per-use sizing is set here. */
+.sobre-pillars {
+  --fg-min: 260px;
+  --fg-max: 420px;
 }
+
+.pastors-grid {
+  --fg-min: 220px;
+  --fg-max: 280px;
+}
+
 .practice-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 20px;
+  gap: clamp(16px, 2vw, 20px);
 }
 
 .sobre-pillar,
 .practice-card {
-  padding: 24px;
+  padding: clamp(20px, 3vw, 24px);
   text-align: left;
 }
 
@@ -34,26 +41,8 @@
   margin-bottom: 0;
 }
 
-.pastors-grid {
-  display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: 20px;
-}
-
-.pastors-grid > * {
-  grid-column: span 2;
-}
-
-.pastors-grid > *:nth-child(4) {
-  grid-column: 2 / span 2;
-}
-
-.pastors-grid > *:nth-child(5) {
-  grid-column: 4 / span 2;
-}
-
 .sobre-history-shell .history-card {
-  padding: 32px;
+  padding: clamp(24px, 4vw, 32px);
   text-align: left;
 }
 
@@ -65,7 +54,7 @@
 .map-container {
   position: relative;
   width: 100%;
-  height: 500px;
+  height: clamp(320px, 45vw, 500px);
   overflow: hidden;
   border-radius: var(--radius-md);
 }
@@ -78,30 +67,7 @@
   border: 0;
 }
 
-@media (max-width: 900px) {
-  .sobre-pillars,
-  .practice-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .pastors-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .pastors-grid > *,
-  .pastors-grid > *:nth-child(4),
-  .pastors-grid > *:nth-child(5) {
-    grid-column: auto;
-  }
-
-  .sobre-history-shell .history-card {
-    padding: 24px;
-  }
-}
-
-@media (max-width: 640px) {
-  .pastors-grid,
-  .sobre-pillars,
+@media (max-width: 600px) {
   .practice-grid {
     grid-template-columns: 1fr;
   }

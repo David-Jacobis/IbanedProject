@@ -77,7 +77,7 @@ const HomePage = () => {
         </section>
 
         <section className="home-highlights">
-          <div className="page-shell highlights-grid">
+          <div className="page-shell highlights-grid fluid-grid">
             {homeHighlights.map((item) => (
               <article key={item.title} className="highlight-card surface-card">
                 <h3>{item.title}</h3>
@@ -172,7 +172,7 @@ const HomePage = () => {
               <h2>Queremos tornar sua chegada simples e sua jornada consistente.</h2>
             </div>
 
-            <div className="path-grid">
+            <div className="path-grid fluid-grid">
               {homeJourney.map((item, index) => (
                 <article key={item.title} className="path-card surface-card">
                   <span className="path-index">0{index + 1}</span>

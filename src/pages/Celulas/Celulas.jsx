@@ -28,7 +28,7 @@ const CelulasPage = () => {
             <h2>Células aproximam pessoas, fortalecem vínculos e sustentam a fé no cotidiano.</h2>
           </div>
 
-          <div className="celulas-benefit-grid">
+          <div className="celulas-benefit-grid fluid-grid">
             {cellBenefits.map((item) => (
               <article key={item.title} className="celulas-benefit-card surface-card">
                 <h3>{item.title}</h3>
@@ -56,7 +56,7 @@ const CelulasPage = () => {
             <h2>Queremos ajudar você a encontrar um grupo com leveza e clareza.</h2>
           </div>
 
-          <div className="celulas-step-grid">
+          <div className="celulas-step-grid fluid-grid">
             {cellSteps.map((step, index) => (
               <article key={step} className="celulas-step-card surface-card">
                 <span>0{index + 1}</span>

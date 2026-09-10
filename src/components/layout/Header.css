@@ -6,28 +6,29 @@
   width: 100%;
   background: rgba(22, 19, 15, 0.86);
   backdrop-filter: blur(12px);
-  padding: 18px 0;
+  padding: clamp(12px, 2vw, 18px) 0;
 }
 
 .header-content {
-  width: min(1120px, calc(100% - 32px));
+  width: var(--space-shell);
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  min-height: 72px;
+  min-height: 64px;
 }
 
 #logo {
-  width: 100px;
+  width: clamp(72px, 12vw, 100px);
   height: auto;
+  display: block;
 }
 
 .menu {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: clamp(10px, 1.6vw, 20px);
   margin-left: auto;
 }
 
@@ -38,6 +39,7 @@
   text-transform: uppercase;
   letter-spacing: 0.08em;
   white-space: nowrap;
+  padding: 8px 4px;
   transition: color 0.2s ease;
 }
 
@@ -50,9 +52,15 @@
   display: none;
   border: none;
   background: transparent;
-  padding: 0;
+  padding: 10px;
+  margin: -10px -10px -10px auto;
+  width: var(--tap-target);
+  height: var(--tap-target);
   flex-direction: column;
-  gap: 4px;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
 }
 
 .menu-icon {
@@ -60,23 +68,38 @@
   width: 22px;
   height: 2px;
   background: var(--color-text-on-dark);
-  cursor: pointer;
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.2s ease;
+}
+
+/* Morph the three bars into an X while the drawer is open. */
+.menu-toggle.open .menu-icon:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle.open .menu-icon:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.open .menu-icon:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 @media (max-width: 768px) {
   .header-content {
     flex-wrap: wrap;
     min-height: auto;
+    gap: 12px;
   }
 
   .menu {
     display: none;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
+    align-items: stretch;
+    gap: 4px;
     width: 100%;
     background: var(--color-surface-strong);
-    padding: 16px;
+    padding: 10px;
     border-radius: 16px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.22);
     margin-left: 0;
@@ -86,10 +109,20 @@
     display: flex;
   }
 
+  .menu a {
+    display: block;
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 10px;
+    font-size: 1rem;
+  }
+
+  .menu a:hover,
+  .menu .active-link {
+    background: rgba(255, 255, 255, 0.06);
+  }
+
   .menu-toggle {
     display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: auto;
   }
 }

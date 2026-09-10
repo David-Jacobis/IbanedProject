@@ -56,21 +56,25 @@ export const socialLinks = deepFreeze([
     id: "whatsapp",
     label: "WhatsApp",
     url: "https://wa.me/553125264248",
+    brand: "#4dd681",
   },
   {
     id: "facebook",
     label: "Facebook",
     url: "https://www.facebook.com/denabi123",
+    brand: "#7fa4ff",
   },
   {
     id: "instagram",
     label: "Instagram",
     url: "https://www.instagram.com/igreja_ibaned/",
+    brand: "#ff89bc",
   },
   {
     id: "youtube",
     label: "YouTube",
     url: "https://www.youtube.com/@IBANED",
+    brand: "#ff6b6b",
   },
 ]);
 

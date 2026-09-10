@@ -6,11 +6,11 @@
 .celulas-benefits,
 .celulas-meeting,
 .celulas-steps {
-  padding: 24px 0;
+  padding: clamp(16px, 3vw, 24px) 0;
 }
 
 .celulas-hero-card {
-  padding: 40px;
+  padding: clamp(24px, 5vw, 40px);
   text-align: center;
   background: linear-gradient(135deg, var(--color-accent-soft), #f7efe1);
 }
@@ -28,11 +28,11 @@
   font-weight: 700;
 }
 
+/* .fluid-grid: 3 across, reflowing to 2 + 1 (centred) then 1. */
 .celulas-benefit-grid,
 .celulas-step-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 20px;
+  --fg-min: 260px;
+  --fg-max: 420px;
 }
 
 .celulas-benefit-card,
@@ -53,15 +53,4 @@
   margin-bottom: 16px;
   font-weight: 700;
   color: var(--color-accent-strong);
-}
-
-@media (max-width: 900px) {
-  .celulas-benefit-grid,
-  .celulas-step-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .celulas-hero-card {
-    padding: 28px;
-  }
 }

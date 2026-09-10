@@ -1,5 +1,4 @@
 .about-card {
-  height: 100%;
   display: flex;
   flex-direction: column;
   background: var(--color-surface);
@@ -11,12 +10,17 @@
 
 .about-card-image {
   width: 100%;
-  height: 260px;
+  aspect-ratio: 4 / 3;
+  max-height: 300px;
   object-fit: cover;
+  object-position: top;
 }
 
 .about-card-content {
-  padding: 20px;
+  /* In a .fluid-grid row every sibling stretches to the tallest card;
+     the content block fills the extra height so the card background is flush. */
+  flex: 1;
+  padding: clamp(16px, 2.5vw, 20px);
   text-align: left;
   color: var(--color-text);
 }

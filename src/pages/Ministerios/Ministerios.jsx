@@ -23,7 +23,7 @@ function MinisteriosPage() {
             </p>
           </div>
 
-          <div className="ministerios-highlight-grid">
+          <div className="ministerios-highlight-grid fluid-grid">
             {ministryHighlights.map((item) => (
               <article key={item.title} className="ministerios-highlight surface-card">
                 <h3>{item.title}</h3>
@@ -54,7 +54,7 @@ function MinisteriosPage() {
             <h2>Queremos que sua entrada no serviço seja saudável e bem acompanhada.</h2>
           </div>
 
-          <div className="ministerios-flow-grid">
+          <div className="ministerios-flow-grid fluid-grid">
             {ministryFlow.map((step, index) => (
               <article key={step} className="ministerios-step surface-card">
                 <span>0{index + 1}</span>

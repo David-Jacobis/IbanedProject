@@ -33,7 +33,7 @@
   background: var(--color-accent-strong);
 }
 
-@media (max-width: 640px) {
+@media (max-width: 600px) {
   .back-to-top {
     right: 16px;
     bottom: 16px;

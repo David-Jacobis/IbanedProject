@@ -4,23 +4,23 @@
 
 .programacao-hero,
 .programacao-list {
-  padding: 24px 0;
+  padding: clamp(16px, 3vw, 24px) 0;
 }
 
 .programacao-shell {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: clamp(18px, 3vw, 24px);
 }
 
+/* .fluid-grid: 3 across, reflowing to 2 + 1 (centred) then 1. */
 .programacao-guide-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 20px;
+  --fg-min: 260px;
+  --fg-max: 420px;
 }
 
 .programacao-guide {
-  padding: 24px;
+  padding: clamp(20px, 3vw, 24px);
   text-align: left;
 }
 
@@ -62,13 +62,17 @@
   object-fit: cover;
 }
 
-@media (max-width: 900px) {
-  .programacao-guide-grid,
+@media (max-width: 768px) {
   .programacao-card {
     grid-template-columns: 1fr;
   }
 
   .programacao-card-text {
-    padding: 24px;
+    padding: clamp(20px, 5vw, 24px);
+  }
+
+  .programacao-card-image {
+    min-height: 200px;
+    max-height: 280px;
   }
 }

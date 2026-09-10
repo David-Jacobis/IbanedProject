@@ -1,0 +1,188 @@
+/*
+ * Foundation layer — single source of truth for the responsive system.
+ * Loaded once in src/index.js, before every component stylesheet.
+ *
+ * Breakpoint strategy (mobile-first thinking, max-width queries in the CSS):
+ *   - up to 600px   → phones: single column, stacked actions, full-width controls
+ *   - 601–1024px    → tablets / small laptops: two-column card rows, condensed spacing
+ *   - 1025–1440px   → laptops & desktops: full multi-column layouts
+ *   - 1441px and up → large monitors: wider shell, larger vertical rhythm (handled by fluid tokens)
+ *
+ * The literal values below are mirrored as tokens for documentation; CSS cannot
+ * read custom properties inside @media, so any new query must use these numbers:
+ *   --bp-sm: 600px;  --bp-md: 1024px;  --bp-xl: 1440px;
+ */
+
+:root {
+  --bp-sm: 600px;
+  --bp-md: 1024px;
+  --bp-xl: 1440px;
+
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+
+  /* Fluid type scale — min at 360px viewport, max around 1440px. */
+  --text-xs: clamp(0.78rem, 0.75rem + 0.15vw, 0.85rem);
+  --text-sm: clamp(0.9rem, 0.87rem + 0.15vw, 0.98rem);
+  --text-base: clamp(1rem, 0.96rem + 0.2vw, 1.125rem);
+  --text-md: clamp(1.1rem, 1.02rem + 0.4vw, 1.3rem);
+  --text-lg: clamp(1.3rem, 1.15rem + 0.7vw, 1.7rem);
+  --text-xl: clamp(1.55rem, 1.3rem + 1.2vw, 2.15rem);
+  --text-2xl: clamp(1.9rem, 1.5rem + 2vw, 2.9rem);
+  --text-3xl: clamp(2.3rem, 1.7rem + 3.1vw, 3.9rem);
+
+  --lh-tight: 1.2;
+  --lh-snug: 1.45;
+  --lh-normal: 1.7;
+
+  --focus-ring: 3px solid var(--color-accent-strong, #8f6b34);
+  --tap-target: 44px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* `clip` trims horizontal overflow without breaking the sticky header
+     (unlike `hidden`, which can create a scroll container on some engines). */
+  overflow-x: clip;
+}
+
+body {
+  margin: 0;
+  overflow-x: clip;
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: var(--lh-normal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+img,
+svg,
+video,
+iframe {
+  max-width: 100%;
+}
+
+img,
+video {
+  height: auto;
+}
+
+/* Global type rhythm. Component styles with an explicit font-size still win. */
+h1,
+h2,
+h3,
+h4 {
+  line-height: var(--lh-tight);
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: var(--text-xl);
+  font-weight: 700;
+}
+
+h3 {
+  font-size: var(--text-md);
+  font-weight: 600;
+}
+
+h4 {
+  font-size: var(--text-base);
+  font-weight: 600;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+/* Prevent grid/flex children from forcing horizontal overflow. */
+.page-shell > *,
+.values-row > *,
+[class$="-grid"] > * {
+  min-width: 0;
+}
+
+/* Screen-reader-only text: in the accessibility tree, invisible on screen. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/*
+ * .fluid-grid — reusable responsive card row.
+ *
+ * Cards flow into as many equal columns as the available width allows, and
+ * an incomplete last row is centred instead of left-aligned. Pure flexbox:
+ * no media queries, no margin hacks, no absolute positioning — correct for
+ * any number of cards at any viewport, and safe against horizontal overflow
+ * (items may shrink below --fg-min rather than overflow).
+ *
+ * Tune per usage with custom properties:
+ *   --fg-min : smallest comfortable card width; drives how many fit per row
+ *   --fg-max : cap so a lone card on the last row stays card-sized. Set it
+ *              near the natural column width at the widest full-row layout so
+ *              fully populated rows are visually unaffected.
+ *   --fg-gap : row and column gap (defaults to the shared card gap)
+ */
+.fluid-grid {
+  --fg-min: 240px;
+  --fg-max: 420px;
+  --fg-gap: clamp(16px, 2vw, 20px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--fg-gap);
+}
+
+.fluid-grid > * {
+  flex: 1 1 var(--fg-min);
+  min-width: 0;
+  max-width: var(--fg-max);
+}
+
+/* Consistent, visible keyboard focus for every interactive element.
+   Zero-specificity (:where) so a component can still opt out or restyle. */
+:where(a, button, input, textarea, select, summary, [tabindex]):focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+:where(button, [role="button"], a, label, summary) {
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,5 +1,5 @@
 import "./Header.css";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/images/IbanedIcon.png";
@@ -23,26 +23,44 @@ const itemVariants = {
 
 const MOBILE_BREAKPOINT = 768;
 
+const isMobileViewport = () =>
+  typeof window !== "undefined" && window.innerWidth <= MOBILE_BREAKPOINT;
+
 const Header = () => {
-  const [isMobile, setIsMobile] = useState(
-    typeof window !== "undefined" ? window.innerWidth <= MOBILE_BREAKPOINT : false
-  );
-  const [menuOpen, setMenuOpen] = useState(
-    typeof window !== "undefined" ? window.innerWidth > MOBILE_BREAKPOINT : true
-  );
+  const [isMobile, setIsMobile] = useState(isMobileViewport);
+  const [menuOpen, setMenuOpen] = useState(!isMobileViewport());
+  const wasMobileRef = useRef(isMobileViewport());
 
   useEffect(() => {
     const handleResize = () => {
       const mobile = window.innerWidth <= MOBILE_BREAKPOINT;
       setIsMobile(mobile);
-      setMenuOpen(!mobile);
+      // Only react when we actually cross the breakpoint, so an open mobile
+      // drawer is not slammed shut by a rotation or a scrollbar resize event.
+      if (wasMobileRef.current !== mobile) {
+        wasMobileRef.current = mobile;
+        setMenuOpen(!mobile);
+      }
     };
 
-    handleResize();
     window.addEventListener("resize", handleResize);
-
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  useEffect(() => {
+    if (!isMobile || !menuOpen) {
+      return undefined;
+    }
+
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") {
+        setMenuOpen(false);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [isMobile, menuOpen]);
 
   const closeMenu = () => {
     if (isMobile) {
@@ -50,10 +68,12 @@ const Header = () => {
     }
   };
 
+  const showMenu = !isMobile || menuOpen;
+
   return (
     <header className="header">
       <div className="header-content">
-        <Link to="/">
+        <Link to="/" aria-label="IBANED — página inicial">
           <motion.img
             src={logo}
             id="logo"
@@ -65,10 +85,11 @@ const Header = () => {
 
         <button
           type="button"
-          className="menu-toggle"
+          className={`menu-toggle ${menuOpen ? "open" : ""}`}
           onClick={() => setMenuOpen((current) => !current)}
-          aria-label="Abrir menu"
+          aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
           aria-expanded={menuOpen}
+          aria-controls="primary-navigation"
         >
           <span className="menu-icon" />
           <span className="menu-icon" />
@@ -76,10 +97,12 @@ const Header = () => {
         </button>
 
         <motion.nav
+          id="primary-navigation"
           className={`menu ${menuOpen ? "active" : ""}`}
           initial={false}
-          animate={!isMobile || menuOpen ? "visible" : "hidden"}
+          animate={showMenu ? "visible" : "hidden"}
           variants={isMobile ? menuVariants : undefined}
+          aria-hidden={isMobile && !menuOpen}
         >
           {navigationLinks.map((link) => (
             <motion.div key={link.label} variants={itemVariants}>
@@ -89,6 +112,7 @@ const Header = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={closeMenu}
+                  tabIndex={showMenu ? 0 : -1}
                 >
                   {link.label}
                 </a>
@@ -96,6 +120,7 @@ const Header = () => {
                 <NavLink
                   to={link.path}
                   onClick={closeMenu}
+                  tabIndex={showMenu ? 0 : -1}
                   className={({ isActive }) => (isActive ? "active-link" : "")}
                 >
                   {link.label}

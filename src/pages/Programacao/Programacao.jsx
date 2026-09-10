@@ -21,7 +21,7 @@ const ProgramacaoPage = () => {
               </p>
             </div>
 
-            <div className="programacao-guide-grid">
+            <div className="programacao-guide-grid fluid-grid">
               {scheduleGuides.map((item) => (
                 <article key={item.title} className="programacao-guide surface-card">
                   <h3>{item.title}</h3>
