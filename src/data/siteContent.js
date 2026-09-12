@@ -4,6 +4,7 @@ import {
   faEarthAmericas,
   faPeopleRoof,
   faTree,
+  faPeopleCarry,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   LuBookOpen,
@@ -104,6 +105,14 @@ export const homeValues = deepFreeze([
     cardColor: "#f6ecd2",
     accentColor: "#c8a24e",
     iconColor: "#a57a24",
+  },
+  {
+    icon: faPeopleCarry,
+    title: "Conduzindo-os a",
+    highlight: "Maturidade Espiritual",
+    cardColor: "#f2e0e9",
+    accentColor: "#b77aa3",
+    iconColor: "#8f4e6c",
   },
   {
     icon: faTree,
