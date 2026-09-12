@@ -47,8 +47,6 @@ const EASE = [0.16, 1, 0.3, 1];
 
 const HomePage = () => {
   const reduceMotion = useReducedMotion();
-  const firstRowValues = homeValues.slice(0, 3);
-  const secondRowValues = homeValues.slice(3);
 
   const { scrollY } = useScroll();
   const parallax = useTransform(scrollY, [0, 700], [0, 90]);
@@ -103,7 +101,7 @@ const HomePage = () => {
                 Para a glória de Deus fazemos discípulos
               </motion.h1>
               <motion.p className="hero-lede" variants={heroItem}>
-                Amamos porque fomos amados 1 João 4:1.
+                Nós o amamos porque ele nos amou primeiro. (1 João 4:19)
               </motion.p>
               <motion.div className="hero-actions" variants={heroItem}>
                 <a
@@ -176,67 +174,35 @@ const HomePage = () => {
               </p>
             </Reveal>
 
-            <div className="values-layout">
-              <Stagger className="values-row values-row-primary">
-                {firstRowValues.map((value) => (
-                  <Stagger.Item
-                    as="article"
-                    key={value.title}
-                    className="value-item"
+            <Stagger className="values-grid fluid-grid">
+              {homeValues.map((value) => (
+                <Stagger.Item
+                  as="article"
+                  key={value.title}
+                  className="value-item"
+                >
+                  <div
+                    className="value-card"
+                    style={{ backgroundColor: value.cardColor }}
                   >
-                    <div
-                      className="value-card"
-                      style={{ backgroundColor: value.cardColor }}
-                    >
-                      <div className="value-card-content">
-                        <FontAwesomeIcon
-                          icon={value.icon}
-                          size="2x"
-                          className="value-card-icon"
-                          style={{ color: value.iconColor }}
-                        />
-                        <h3>{value.title.toUpperCase()}</h3>
-                        <h4>{value.highlight.toUpperCase()}</h4>
-                      </div>
+                    <div className="value-card-content">
+                      <FontAwesomeIcon
+                        icon={value.icon}
+                        size="2x"
+                        className="value-card-icon"
+                        style={{ color: value.iconColor }}
+                      />
+                      <h3>{value.title.toUpperCase()}</h3>
+                      <h4>{value.highlight.toUpperCase()}</h4>
                     </div>
-                    <div
-                      className="value-card-accent"
-                      style={{ backgroundColor: value.accentColor }}
-                    />
-                  </Stagger.Item>
-                ))}
-              </Stagger>
-
-              <Stagger className="values-row values-row-secondary">
-                {secondRowValues.map((value) => (
-                  <Stagger.Item
-                    as="article"
-                    key={value.title}
-                    className="value-item"
-                  >
-                    <div
-                      className="value-card"
-                      style={{ backgroundColor: value.cardColor }}
-                    >
-                      <div className="value-card-content">
-                        <FontAwesomeIcon
-                          icon={value.icon}
-                          size="2x"
-                          className="value-card-icon"
-                          style={{ color: value.iconColor }}
-                        />
-                        <h3>{value.title.toUpperCase()}</h3>
-                        <h4>{value.highlight.toUpperCase()}</h4>
-                      </div>
-                    </div>
-                    <div
-                      className="value-card-accent"
-                      style={{ backgroundColor: value.accentColor }}
-                    />
-                  </Stagger.Item>
-                ))}
-              </Stagger>
-            </div>
+                  </div>
+                  <div
+                    className="value-card-accent"
+                    style={{ backgroundColor: value.accentColor }}
+                  />
+                </Stagger.Item>
+              ))}
+            </Stagger>
           </div>
         </section>
 
