@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.css": "/IbanedProject/static/css/main.6b62cdec.css",
-    "main.js": "/IbanedProject/static/js/main.7a0083de.js",
+    "main.css": "/IbanedProject/static/css/main.86d68ac9.css",
+    "main.js": "/IbanedProject/static/js/main.db4f596b.js",
     "static/css/598.797cec0d.chunk.css": "/IbanedProject/static/css/598.797cec0d.chunk.css",
     "static/js/598.f1f706ab.chunk.js": "/IbanedProject/static/js/598.f1f706ab.chunk.js",
     "static/css/979.be5501ef.chunk.css": "/IbanedProject/static/css/979.be5501ef.chunk.css",
-    "static/js/979.0d0a0b95.chunk.js": "/IbanedProject/static/js/979.0d0a0b95.chunk.js",
+    "static/js/979.be7b39a4.chunk.js": "/IbanedProject/static/js/979.be7b39a4.chunk.js",
     "static/js/453.4f53980c.chunk.js": "/IbanedProject/static/js/453.4f53980c.chunk.js",
     "static/js/837.4de1ba55.chunk.js": "/IbanedProject/static/js/837.4de1ba55.chunk.js",
     "static/js/945.03a55727.chunk.js": "/IbanedProject/static/js/945.03a55727.chunk.js",
@@ -13,6 +13,7 @@
     "static/media/evento-oracao-1400.jpg": "/IbanedProject/static/media/evento-oracao-1400.81a0c7d5befc126bb8b2.jpg",
     "static/media/evento-semanas-1400.jpg": "/IbanedProject/static/media/evento-semanas-1400.add31fa90755d4c238da.jpg",
     "static/media/intercecao-1600.jpg": "/IbanedProject/static/media/intercecao-1600.c3a50f67a7f03fa14b3f.jpg",
+    "static/media/ReconstruindoMurosPrEber3.jpeg": "/IbanedProject/static/media/ReconstruindoMurosPrEber3.eac1c437f39b21582dce.jpeg",
     "static/media/PrFabio.jpg": "/IbanedProject/static/media/PrFabio.8ce6953471c172f6054c.jpg",
     "static/media/hero-home.jpg": "/IbanedProject/static/media/hero-home.8f9bacfe258ec738ec45.jpg",
     "static/media/IbanedIcon.png": "/IbanedProject/static/media/IbanedIcon.fc5042c984cec87aa3fd.png",
@@ -24,19 +25,21 @@
     "static/media/PrMarcos.jpg": "/IbanedProject/static/media/PrMarcos.fe5d3ec08af584363084.jpg",
     "static/media/avalanche-1600.jpg": "/IbanedProject/static/media/avalanche-1600.cdf1cf7d814e77b341df.jpg",
     "static/media/SowTeste.png": "/IbanedProject/static/media/SowTeste.cbf66f9fa9be58f5b371.png",
+    "static/media/DeusRestauraOCoraçãoFerido.jpeg": "/IbanedProject/static/media/DeusRestauraOCoraçãoFerido.e5f47fa16b7fd409bbc9.jpeg",
+    "static/media/SowSemeando.jpeg": "/IbanedProject/static/media/SowSemeando.dcb76f710cd8c98b828b.jpeg",
     "index.html": "/IbanedProject/index.html",
-    "main.6b62cdec.css.map": "/IbanedProject/static/css/main.6b62cdec.css.map",
-    "main.7a0083de.js.map": "/IbanedProject/static/js/main.7a0083de.js.map",
+    "main.86d68ac9.css.map": "/IbanedProject/static/css/main.86d68ac9.css.map",
+    "main.db4f596b.js.map": "/IbanedProject/static/js/main.db4f596b.js.map",
     "598.797cec0d.chunk.css.map": "/IbanedProject/static/css/598.797cec0d.chunk.css.map",
     "598.f1f706ab.chunk.js.map": "/IbanedProject/static/js/598.f1f706ab.chunk.js.map",
     "979.be5501ef.chunk.css.map": "/IbanedProject/static/css/979.be5501ef.chunk.css.map",
-    "979.0d0a0b95.chunk.js.map": "/IbanedProject/static/js/979.0d0a0b95.chunk.js.map",
+    "979.be7b39a4.chunk.js.map": "/IbanedProject/static/js/979.be7b39a4.chunk.js.map",
     "453.4f53980c.chunk.js.map": "/IbanedProject/static/js/453.4f53980c.chunk.js.map",
     "837.4de1ba55.chunk.js.map": "/IbanedProject/static/js/837.4de1ba55.chunk.js.map",
     "945.03a55727.chunk.js.map": "/IbanedProject/static/js/945.03a55727.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6b62cdec.css",
-    "static/js/main.7a0083de.js"
+    "static/css/main.86d68ac9.css",
+    "static/js/main.db4f596b.js"
   ]
 }
