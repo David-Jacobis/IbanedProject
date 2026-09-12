@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/IbanedProject/static/css/main.a4ebdfa4.css",
-    "main.js": "/IbanedProject/static/js/main.15a65119.js",
+    "main.css": "/IbanedProject/static/css/main.6b62cdec.css",
+    "main.js": "/IbanedProject/static/js/main.7a0083de.js",
     "static/css/598.797cec0d.chunk.css": "/IbanedProject/static/css/598.797cec0d.chunk.css",
     "static/js/598.f1f706ab.chunk.js": "/IbanedProject/static/js/598.f1f706ab.chunk.js",
     "static/css/979.be5501ef.chunk.css": "/IbanedProject/static/css/979.be5501ef.chunk.css",
@@ -25,8 +25,8 @@
     "static/media/avalanche-1600.jpg": "/IbanedProject/static/media/avalanche-1600.cdf1cf7d814e77b341df.jpg",
     "static/media/SowTeste.png": "/IbanedProject/static/media/SowTeste.cbf66f9fa9be58f5b371.png",
     "index.html": "/IbanedProject/index.html",
-    "main.a4ebdfa4.css.map": "/IbanedProject/static/css/main.a4ebdfa4.css.map",
-    "main.15a65119.js.map": "/IbanedProject/static/js/main.15a65119.js.map",
+    "main.6b62cdec.css.map": "/IbanedProject/static/css/main.6b62cdec.css.map",
+    "main.7a0083de.js.map": "/IbanedProject/static/js/main.7a0083de.js.map",
     "598.797cec0d.chunk.css.map": "/IbanedProject/static/css/598.797cec0d.chunk.css.map",
     "598.f1f706ab.chunk.js.map": "/IbanedProject/static/js/598.f1f706ab.chunk.js.map",
     "979.be5501ef.chunk.css.map": "/IbanedProject/static/css/979.be5501ef.chunk.css.map",
@@ -36,7 +36,7 @@
     "945.03a55727.chunk.js.map": "/IbanedProject/static/js/945.03a55727.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a4ebdfa4.css",
-    "static/js/main.15a65119.js"
+    "static/css/main.6b62cdec.css",
+    "static/js/main.7a0083de.js"
   ]
 }
