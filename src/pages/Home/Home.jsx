@@ -100,12 +100,10 @@ const HomePage = () => {
                 Igreja Batista Estrela Dalva
               </motion.span>
               <motion.h1 className="hero-title" variants={heroItem}>
-                Um lugar para conhecer Jesus, criar raízes e servir em
-                comunidade.
+                Para a glória de Deus fazemos discípulos
               </motion.h1>
               <motion.p className="hero-lede" variants={heroItem}>
-                Queremos receber você com clareza, cuidado e um ambiente que
-                facilite conexão, pertencimento e crescimento espiritual.
+                Amamos porque fomos amados 1 João 4:1.
               </motion.p>
               <motion.div className="hero-actions" variants={heroItem}>
                 <a
