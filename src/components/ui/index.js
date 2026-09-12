@@ -1,6 +1,7 @@
 export { default as AboutCard } from "./AboutCard/AboutCard";
 export { default as BackToTop } from "./BackToTop/BackToTop";
 export { default as CountUp } from "./CountUp/CountUp";
+export { default as DevotionalCard } from "./DevotionalCard/DevotionalCard";
 export { default as EventCard } from "./EventCard/EventCard";
 export { default as GroupsSection } from "./GroupsSection/GroupsSection";
 export { default as MeetingCards } from "./MeetingCards/MeetingCards";

@@ -50,9 +50,9 @@ const RHYTHM = [
 export default function GroupsSection({
   images = groupImages,
   formUrl = GROUP_FORM_URL,
-  title = "Faça parte de um grupo da igreja!",
+  title = "Faça parte de uma célula da igreja!",
   subtitle = "Encontre pessoas, compartilhe a vida e cresça junto com a gente.",
-  ctaLabel = "Encontre um grupo para você",
+  ctaLabel = "Encontre uma célula para você",
 }) {
   const reduceMotion = useReducedMotion();
   const [paused, setPaused] = useState(false);

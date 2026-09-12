@@ -35,6 +35,7 @@ export const navigationLinks = deepFreeze([
   { label: "Ministérios", path: "/ministerios" },
   { label: "Programação", path: "/programacao" },
   { label: "Células", path: "/celulas" },
+  { label: "Devocionais", path: "/devocionais" },
   {
     label: "Assistir Online",
     path: "https://www.youtube.com/@IBANED",
@@ -413,3 +414,59 @@ export const servicePurpose = deepFreeze({
   text:
     "Fomos chamados para ser luz e sal na Terra, demonstrando o amor de Cristo com compaixão, justiça e serviço. Em cada gesto de cuidado, apontamos para o evangelho e levamos esperança a quem está perto de nós.",
 });
+
+/* Cole aqui o link real de cada plano/leitura no YouVersion. Enquanto um
+ * devocional mantiver esse valor, o botão "Ler no YouVersion" avisa no
+ * console em vez de abrir uma URL inválida (mesmo padrão do GROUP_FORM_URL
+ * em GroupsSection). */
+export const YOUVERSION_PLACEHOLDER_URL = "COLOQUE_O_LINK_DO_YOUVERSION_AQUI";
+
+/* Devocionais — conteúdo de exemplo para demonstrar o layout; substitua
+ * título, descrição, imagem e link pelos devocionais reais da igreja.
+ *
+ * `publishedAt` (formato "AAAA-MM-DD") é a única informação usada para
+ * decidir qual card aparece em destaque: a página sempre ordena esta lista
+ * por data e mostra o mais recente no topo — não é preciso reordenar o
+ * array nem tocar em nenhum componente ao adicionar um devocional novo. */
+export const devotionals = deepFreeze([
+  {
+    title: "Perseverança em tempos de espera",
+    description:
+      "Um convite a confiar no tempo de Deus e continuar firme enquanto aguardamos respostas e promessas.",
+    image: Intercessao,
+    url: YOUVERSION_PLACEHOLDER_URL,
+    publishedAt: "2026-08-18",
+  },
+  {
+    title: "A alegria de servir em comunidade",
+    description:
+      "Como pequenos gestos de serviço fortalecem os vínculos e refletem o amor de Cristo entre nós.",
+    image: MatheusBiblia,
+    url: YOUVERSION_PLACEHOLDER_URL,
+    publishedAt: "2026-09-01",
+  },
+  {
+    title: "Confiança que renova a alma",
+    description:
+      "Uma reflexão sobre descansar na fidelidade de Deus mesmo quando o caminho ainda não está claro.",
+    image: Biblia,
+    url: YOUVERSION_PLACEHOLDER_URL,
+    publishedAt: "2026-09-08",
+  },
+  {
+    title: "Gratidão como estilo de vida",
+    description:
+      "Pequenos hábitos diários para cultivar um coração agradecido, mesmo nas estações mais difíceis.",
+    image: Biblia,
+    url: YOUVERSION_PLACEHOLDER_URL,
+    publishedAt: "2026-08-25",
+  },
+  {
+    title: "Um coração disposto a ouvir",
+    description:
+      "Sobre criar espaço de silêncio e escuta para reconhecer a voz de Deus em meio à rotina.",
+    image: MatheusBiblia,
+    url: YOUVERSION_PLACEHOLDER_URL,
+    publishedAt: "2026-08-11",
+  },
+]);

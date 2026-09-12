@@ -1,6 +1,7 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import {
   CelulasPage,
+  DevocionaisPage,
   HomePage,
   MinisteriosPage,
   ProgramacaoPage,
@@ -15,6 +16,7 @@ const AppRoutes = () => {
       <Route path="/ministerios" element={<MinisteriosPage />} />
       <Route path="/programacao" element={<ProgramacaoPage />} />
       <Route path="/celulas" element={<CelulasPage />} />
+      <Route path="/devocionais" element={<DevocionaisPage />} />
       <Route path="*" element={<Navigate replace to="/" />} />
     </Routes>
   );
