@@ -28,6 +28,10 @@ import PastorLuciano from "../assets/images/PrLu.jpg";
 import PastorMarcos from "../assets/images/PrMarcos.jpg";
 import Semanas from "../assets/images/evento-semanas-1400.jpg";
 import Sow from "../assets/images/SowTeste.png";
+import ReconstruindoMuros from "../assets/images/ReconstruindoMurosPrEber3.jpeg";
+import MovaSe from "../assets/images/MovaSe.jpeg";
+import SowSemeando from "../assets/images/SowSemeando.jpeg";
+import DeusRestaura from "../assets/images/DeusRestauraOCoraçãoFerido.jpeg";
 
 export const navigationLinks = deepFreeze([
   { label: "Início", path: "/" },
@@ -152,7 +156,7 @@ export const homeHighlights = deepFreeze([
 ]);
 
 export const homeStats = deepFreeze([
-  { value: "1989", label: "Igreja oficialmente registrada" },
+  { value: "1988", label: "Igreja oficialmente registrada" },
   { value: 5, count: true, label: "Frentes pastorais em cuidado ativo" },
   { value: "Semanal", label: "Ritmo constante de culto, oração e comunhão" },
 ]);
@@ -430,18 +434,18 @@ export const YOUVERSION_PLACEHOLDER_URL = "COLOQUE_O_LINK_DO_YOUVERSION_AQUI";
  * array nem tocar em nenhum componente ao adicionar um devocional novo. */
 export const devotionals = deepFreeze([
   {
-    title: "Perseverança em tempos de espera",
+    title: "Reconstruindo os Muros",
     description:
       "Um convite a confiar no tempo de Deus e continuar firme enquanto aguardamos respostas e promessas.",
-    image: Intercessao,
+    image: ReconstruindoMuros,
     url: YOUVERSION_PLACEHOLDER_URL,
     publishedAt: "2026-08-18",
   },
   {
-    title: "A alegria de servir em comunidade",
+    title: "MOVA-SE",
     description:
       "Como pequenos gestos de serviço fortalecem os vínculos e refletem o amor de Cristo entre nós.",
-    image: MatheusBiblia,
+    image: MovaSe,
     url: YOUVERSION_PLACEHOLDER_URL,
     publishedAt: "2026-09-01",
   },
@@ -449,24 +453,16 @@ export const devotionals = deepFreeze([
     title: "Confiança que renova a alma",
     description:
       "Uma reflexão sobre descansar na fidelidade de Deus mesmo quando o caminho ainda não está claro.",
-    image: Biblia,
+    image: SowSemeando,
     url: YOUVERSION_PLACEHOLDER_URL,
     publishedAt: "2026-09-08",
   },
   {
-    title: "Gratidão como estilo de vida",
+    title: "Deus restaura o coração ferido",
     description:
       "Pequenos hábitos diários para cultivar um coração agradecido, mesmo nas estações mais difíceis.",
-    image: Biblia,
+    image: DeusRestaura,
     url: YOUVERSION_PLACEHOLDER_URL,
     publishedAt: "2026-08-25",
-  },
-  {
-    title: "Um coração disposto a ouvir",
-    description:
-      "Sobre criar espaço de silêncio e escuta para reconhecer a voz de Deus em meio à rotina.",
-    image: MatheusBiblia,
-    url: YOUVERSION_PLACEHOLDER_URL,
-    publishedAt: "2026-08-11",
   },
 ]);
