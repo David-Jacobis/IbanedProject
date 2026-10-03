@@ -11,8 +11,8 @@ import photo1 from "../../../assets/images/PrLeal.jpg";
 import photo2 from "../../../assets/images/matheusbiblia-1600.jpg";
 import photo3 from "../../../assets/images/PrEber3.jpg";
 import photo4 from "../../../assets/images/biblia-1600.jpg";
-import photo5 from "../../../assets/images/PrLu.jpg";
-import photo6 from "../../../assets/images/PrFabio.jpg";
+import photo5 from "../../../assets/images/PrJoaquim.png";
+import photo6 from "../../../assets/images/PrBruno.png";
 import photo7 from "../../../assets/images/PrMarcos.jpg";
 
 /* ------------------------------------------------------------------ *

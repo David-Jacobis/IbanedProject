@@ -5,6 +5,7 @@ import {
   aboutPillars,
   aboutPractices,
   churchHistory,
+  pastoralCouncil,
   pastors,
 } from "../../data/siteContent";
 
@@ -46,13 +47,21 @@ function SobrePage() {
             <h2>Pastores que servem com presença, ensino e cuidado.</h2>
           </Reveal>
 
-          <Stagger className="pastors-grid fluid-grid">
-            {pastors.map((pastor) => (
-              <Stagger.Item key={pastor.name} className="pastors-grid__item">
+          <Reveal className="pastoral-council surface-card">
+            <h3>{pastoralCouncil.title}</h3>
+            {pastoralCouncil.paragraphs.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+          </Reveal>
+
+          <Stagger className="pastors-list">
+            {pastors.map((pastor, index) => (
+              <Stagger.Item key={pastor.name}>
                 <AboutCard
                   img={pastor.image}
                   title={pastor.name}
                   text={pastor.description}
+                  reverse={index % 2 === 1}
                 />
               </Stagger.Item>
             ))}

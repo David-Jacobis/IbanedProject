@@ -1,36 +1,75 @@
 .about-card {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: minmax(220px, 300px) 1fr;
+  align-items: stretch;
   background: var(--color-surface);
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--color-shadow);
 }
 
-.about-card-image {
+.about-card--reverse {
+  grid-template-columns: 1fr minmax(220px, 300px);
+}
+
+.about-card--reverse .about-card-media {
+  order: 2;
+}
+
+.about-card-media {
+  overflow: hidden;
+}
+
+.about-card-media img {
   width: 100%;
-  aspect-ratio: 4 / 3;
-  max-height: 300px;
+  height: 100%;
+  min-height: 280px;
   object-fit: cover;
   object-position: top;
+  display: block;
 }
 
 .about-card-content {
-  /* In a .fluid-grid row every sibling stretches to the tallest card;
-     the content block fills the extra height so the card background is flush. */
-  flex: 1;
-  padding: clamp(16px, 2.5vw, 20px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  padding: clamp(24px, 4vw, 40px);
   text-align: left;
   color: var(--color-text);
 }
 
 .about-card-content h3 {
-  margin-top: 0;
+  margin: 0;
+  font-size: var(--text-xl);
 }
 
 .about-card-content p {
-  margin-bottom: 0;
-  line-height: 1.6;
+  margin: 0;
+  /* comfortable reading line-length regardless of how wide the row is */
+  max-width: 62ch;
+  line-height: 1.8;
   color: var(--color-text-soft);
+}
+
+@media (max-width: 760px) {
+  .about-card,
+  .about-card--reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .about-card--reverse .about-card-media {
+    order: 0;
+  }
+
+  .about-card-media img {
+    min-height: 0;
+    aspect-ratio: 4 / 3;
+    max-height: 280px;
+  }
+
+  .about-card-content {
+    padding: clamp(20px, 5vw, 28px);
+  }
 }

@@ -22,19 +22,36 @@
   --fg-max: 420px;
 }
 
-.pastors-grid {
-  --fg-min: 220px;
-  --fg-max: 280px;
+.pastoral-council {
+  max-width: 900px;
+  margin: 0 auto clamp(28px, 4vw, 40px);
+  padding: clamp(24px, 4vw, 32px);
+  text-align: left;
 }
 
-.pastors-grid__item {
+.pastoral-council h3 {
+  margin-top: 0;
+  color: var(--color-text);
+}
+
+.pastoral-council p {
+  color: var(--color-text-soft);
+  line-height: 1.8;
+}
+
+.pastoral-council p:last-child {
+  margin-bottom: 0;
+}
+
+/* A stacked, alternating list reads far better than a narrow equal-height
+   grid once bios are real paragraphs instead of a line or two — capped
+   width keeps each row's text at a comfortable reading length. */
+.pastors-list {
+  max-width: 900px;
+  margin: 0 auto;
   display: flex;
-  min-width: 0;
-}
-
-.pastors-grid__item > .about-card {
-  flex: 1;
-  width: 100%;
+  flex-direction: column;
+  gap: clamp(20px, 3vw, 28px);
 }
 
 .practice-grid {

@@ -22,9 +22,7 @@ import Intercessao from "../assets/images/intercecao-1600.jpg";
 import MatheusBiblia from "../assets/images/matheusbiblia-1600.jpg";
 import Oracao from "../assets/images/evento-oracao-1400.jpg";
 import PastorEber from "../assets/images/PrEber3.jpg";
-import PastorFabio from "../assets/images/PrFabio.jpg";
 import PastorLeal from "../assets/images/PrLeal.jpg";
-import PastorLuciano from "../assets/images/PrLu.jpg";
 import PastorMarcos from "../assets/images/PrMarcos.jpg";
 import Semanas from "../assets/images/evento-semanas-1400.jpg";
 import Sow from "../assets/images/SowTeste.png";
@@ -32,6 +30,8 @@ import ReconstruindoMuros from "../assets/images/ReconstruindoMurosPrEber3.jpeg"
 import MovaSe from "../assets/images/MovaSe.jpeg";
 import SowSemeando from "../assets/images/SowSemeando.jpeg";
 import DeusRestaura from "../assets/images/DeusRestauraOCoraçãoFerido.jpeg";
+import PastorJoquim from "../assets/images/PrJoaquim.png";
+import PastorBruno from "../assets/images/PrBruno.png";
 
 export const navigationLinks = deepFreeze([
   { label: "Início", path: "/" },
@@ -279,36 +279,46 @@ export const scheduleGuides = deepFreeze([
   },
 ]);
 
+export const pastoralCouncil = deepFreeze({
+  title: "Conselho Pastoral",
+  paragraphs: [
+    "O Conselho Pastoral é composto pelos pastores titulares, que respondem pela liderança espiritual e doutrinária da igreja — hoje formado pelos pastores Éber, Antônio Leal e Marcos.",
+    "Além dos pastores membros do Conselho Pastoral, a IBANED também conta com outros pastores que servem aqui com alegria, dedicação e entusiasmo, com o respeito e a honra dos demais. É o caso do pastor Joaquim Coutinho Neto, ordenado na IBANED em 4 de março de 2012, que deixou a igreja em 2016 para ajudar na implantação de uma nova igreja e retornou em 2024, e do pastor Bruno França, que retornou à IBANED em 2025 após uma temporada de dez anos nos Estados Unidos.",
+  ],
+});
+
 export const pastors = deepFreeze([
   {
-    image: PastorLeal,
-    name: "Pastor Antonio Leal",
-    description:
-      "É o Pastor Emérito da IBANED. Casado com Luzia Leal, tem quatro filhos: Edom, Éber, Estêvão e Ester. Está na IBANED desde 1986.",
-  },
-  {
     image: PastorEber,
-    name: "Pastor Eber Leal",
+    name: "Pr Éber Rodrigues Leal",
     description:
-      "Pastor presidente, casado com Adriana Leal. Foi ordenado ao ministério pastoral em 2011 e serve à IBANED em dedicação exclusiva.",
+      "Pastor Éber é casado com Adriana Leal e eles têm três filhos, Rafael Abner e Ana Caroline, já casados e Guilherme Asafe solteiro. Ele é bacharel em teologia desde 2009, foi ordenado ao ministério pastoral em 2011, tendo pastoreado a igreja de forma bivocacionada por um ano e desde 2012 serve à IBANED em regime de dedicação exclusiva, tento assumido a presidência em 26 de Abril de 2024.",
   },
   {
-    image: PastorLuciano,
-    name: "Pastor Marcos Aguiar ",
+    image: PastorLeal,
+    name: "Pr Antônio Vieira Leal",
     description:
-      "Casado com Mariele Neves, foi ordenado em 2012 e serve à IBANED em dedicação exclusiva, com foco em cuidado e ensino.",
+      "É o pastor fundador da IBANED e recebeu o título de pastor emérito da igreja em culto especial no dia nove de junho de 2024. O pastor Leal, como o chamamos carinhosamente, é casado com Luzia Leal a mais de cinquenta anos, eles têm quatro filhos, Edom, Éber, Estêvão e Ester, e nove netos.O pastor Leal não sabe ao certo, desde quando estão na IBANED, mas foi por volta de 1984 que ele chegou por aqui com sua esposa e os filhos ainda crianças, isso se deu antes mesmo da nossa organização formal como igreja.",
   },
   {
     image: PastorMarcos,
-    name: "Pastor Joaquim Coutinho",
+    name: "Pr Marcos Aguiar Ferreira",
     description:
-      "Casado com Ana Paula, exerce um ministério bivocacionado e tem contribuído com fidelidade no pastoreio e discipulado da igreja.",
+      "O Pastor Marcos é casado com Ana Paula desde o ano 1992, ele tem três filhos, Andressa Ferreira que é missionária transcultural da JAMI, Lucas que mora em Roraima e Mateus que é o caçula e mora com eles aqui em BH. Foi ordenado ao ministério pastoral em 2006 na Primeira Igreja  Batista de Ceilândia no Distrito Federal, onde serviu até o ano 2010, quando foi transferido pela Força Aérea Brasileira para Roraima em 2011 e serviu a Igreja Batista Missionária em Roraima  até o ano de 2020, quando o Senhor o trouxe para Belo Horizonte e desde então tem servido aqui no ministério pastoral.",
   },
   {
-    image: PastorFabio,
-    name: "Pastor Bruno França",
+    image: PastorJoquim,
+    name: "Pr Joquim Coutinho Neto",
     description:
-      "Casado com Débora Silva e pai de Catarina. Foi ordenado em 2018 e serve ao Senhor na IBANED em um ministério bivocacionado.",
+      "O pastor Joaquim Coutinho Neto chegou a IBANED em 1993, oriundo da Igreja Batista da Floresta onde se convrteu a Cristo em 1989, foi ordenado ao ministério pastoral aqui na IBANED no dia 4 de Março de 2012, tendo deixado a igreja em 2016 para ajudar na implantação de uma nova igreja e retornado a IBANED em 2024. É casado com a irmã Selma Sales Coutinho e pais do Israel que já é casado.",
+  },
+  {
+    image: PastorBruno,
+    name: "Pr Bruno França",
+    description:
+      " O Pastor Bruno França é casado com Meury e pai de Ingrid, Theo e Matteo. Chamado para ensinar e pregar o evangelho, tem dedicado sua vida ao ministério da Palavra e ao fortalecimento das famílias." +
+      " Após servir na IBANED, mudou-se com sua família para os Estados Unidos, onde permaneceu por cerca de dez anos em atividade missionária. É escritor e idealizador do ministério 'Família Projeto de Deus', além de autor dos livros Família Projeto de Deus e Portas Abertas." +
+      " Em 2025, retornou ao Brasil e à IBANED, onde atualmente serve no ministério pastoral.",
   },
 ]);
 
